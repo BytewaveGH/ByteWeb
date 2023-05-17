@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import React from 'react';
 import { Layout, Menu, theme } from 'antd';
 import Nav from '@/pages/components/navbar';
+import NavFooter from '@/pages/components/footer';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Layout>
+        <Layout className='w-full bg-red-600'>
           <Nav />
           <Content className="site-layout" style={{ padding: '0 50px' }}>
             
@@ -31,7 +32,9 @@ export default function RootLayout({
               {children}
             </div>
           </Content>
-          <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+          <Footer style={{ textAlign: 'center' }}>
+            <NavFooter />
+          </Footer>
         </Layout>
         
       </body>

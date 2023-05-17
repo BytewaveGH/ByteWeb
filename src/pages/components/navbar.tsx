@@ -210,18 +210,18 @@ function NavList() {
   );
 }
  
-export default function Nav() {
+export default function Example() {
   const [openNav, setOpenNav] = React.useState(false);
  
-//   React.useEffect(() => {
-//     window.addEventListener(
-//       "resize",
-//       () => window.innerWidth >= 960 && setOpenNav(false)
-//     );
-//   }, []);
+  React.useEffect(() => {
+    window.addEventListener(
+      "resize",
+      () => window.innerWidth >= 960 && setOpenNav(false)
+    );
+  }, []);
  
   return (
-    <Navbar className="w-full sticky py-2 shadow-none ">
+    <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
