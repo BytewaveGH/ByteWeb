@@ -26,11 +26,10 @@ export default function RootLayout({
         <Layout className='w-full bg-red-600'>
           <Nav />
           <Content className="site-layout" style={{ padding: '0 50px' }}>
-            
-            <div>
-              <h1>Hello Ahmed</h1>
+          
               {children}
-            </div>
+
+              
           </Content>
           <Footer style={{ textAlign: 'center' }}>
             <NavFooter />
