@@ -1,24 +1,49 @@
 import AnimatedText from '@/pages/components/AnimatedText'
 import Carousel_Component from '@/pages/components/carousel'
+import Diffs from '@/pages/components/diffSection'
 import WhyByte from '@/pages/components/featureSection'
 import LogoCloud from '@/pages/components/logoClouds'
+import PageSec from '@/pages/components/pageSection'
 import SoftwareWheel from '@/pages/components/softwareWheel'
 import Image from 'next/image'
+import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
+import PageSecExtended from '@/pages/components/pageSecExtend'
+
 
 export default function Home() {
+
+  const features = [
+  {
+    name: 'Push to deploy.',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: CloudArrowUpIcon,
+  },
+  {
+    name: 'SSL certificates.',
+    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+    icon: LockClosedIcon,
+  },
+  {
+    name: 'Database backups.',
+    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+    icon: ServerIcon,
+  },
+]
+
   return (
     <div className="w-full min-h-screen   ">
       <div className=" w-full h-full flex items-center justify-between font-mono text-sm ">
        
           <div className='w-1/2 h-full  justify-center items-center'>
-            <div className='justify-center items-center mt-14'>
+            <div className='w-full justify-center items-center '>
             <AnimatedText className={'justify-center items-center'} text={'Custom software development services'} />
             <p className="mt-4  mx-auto w-4/5 text-lg leading-8 text-gray-600">
               Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
               pulvinar et feugiat blandit at. In mi viverra elit nunc.
             </p>
             </div>
-            <div className='mt-4 '>
+            <div className=' '>
               <SoftwareWheel />
             </div>
 
@@ -38,6 +63,23 @@ export default function Home() {
 
       <div>
         <WhyByte />
+      </div>
+
+      <div>
+        <Diffs />
+      </div>
+
+       <div>
+        <PageSec />
+      </div>
+      <div>
+        <PageSecExtended leftSide={features} rightSide={[]} imageRight={true} />
+      </div>
+       <div>
+        <PageSecExtended leftSide={features} rightSide={[]} imageRight={false} />
+      </div>
+      <div>
+        <PageSecExtended leftSide={features} rightSide={[]} imageRight={true} />
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">

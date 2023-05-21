@@ -18,7 +18,11 @@ module.exports = withMT({
       animation: {
         'spin-slow': 'spin 8s linear infinite'
       }
+      
     },
   },
-  plugins: [],
+  plugins: [
+    //  require('@tailwindcss/aspect-ratio'),
+  ],
 }) 
+

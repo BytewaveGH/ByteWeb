@@ -2,13 +2,13 @@
 
 import { Carousel } from "@material-tailwind/react";
 import Image from 'next/image';
-import laptops from '../../../public/assets/laptops.jpg';
+import laptops from '../../../public/laptops.jpg';
  
 export default function Carousel_Component() {
   return (
     <Carousel
-        transition={{duration: 2}}
-      className="rounded-xl"
+      transition={{duration: 2}}
+      className="rounded-xl h-full w-full"
       navigation={({ setActiveIndex, activeIndex, length }) => (
         <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
           {new Array(length).fill("").map((_, i) => (

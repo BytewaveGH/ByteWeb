@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import {
   Navbar,
@@ -229,7 +231,7 @@ export default function Example() {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2"
         >
-          Material Tailwind
+          Bytewave GH
         </Typography>
         <div className="hidden lg:block">
           <NavList />
@@ -239,7 +241,7 @@ export default function Example() {
             Sign In
           </Button>
           <Button variant="gradient" size="sm">
-            Sign Up
+            Registry Contact
           </Button>
         </div>
         <IconButton
@@ -262,7 +264,7 @@ export default function Example() {
             Sign In
           </Button>
           <Button variant="gradient" size="sm" fullWidth>
-            Sign Up
+            Registry Contact
           </Button>
         </div>
       </Collapse>
