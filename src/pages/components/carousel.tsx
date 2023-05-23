@@ -2,7 +2,7 @@
 
 import { Carousel } from "@material-tailwind/react";
 import Image from 'next/image';
-import laptops from '../../../public/assets/laptops.jpg';
+import laptops from '../../../public/laptops.jpg'
  
 export default function Carousel_Component() {
   return (
