@@ -1,3 +1,7 @@
+"use client"
+
+
+import React from "react";
 import AnimatedText from '@/pages/components/AnimatedText'
 import Carousel_Component from '@/pages/components/carousel'
 import Diffs from '@/pages/components/diffSection'
@@ -8,6 +12,7 @@ import SoftwareWheel from '@/pages/components/softwareWheel'
 import Image from 'next/image'
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import PageSecExtended from '@/pages/components/pageSecExtend'
+
 
 
 export default function Home() {
@@ -31,13 +36,16 @@ export default function Home() {
   },
 ]
 
+
+
   return (
     <div className="w-full min-h-screen   ">
       <div className=" w-full h-full flex items-center justify-between font-mono text-sm ">
        
           <div className='w-1/2 h-full  justify-center items-center'>
             <div className='w-full justify-center items-center '>
-            <AnimatedText className={'justify-center items-center'} text={'Custom software development services'} />
+              
+            <AnimatedText className={'justify-center items-center '} text={`Custom software `} />
             <p className="mt-4  mx-auto w-4/5 text-lg leading-8 text-gray-600">
               Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
               pulvinar et feugiat blandit at. In mi viverra elit nunc.

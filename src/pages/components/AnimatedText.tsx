@@ -1,5 +1,5 @@
 'use client';
-
+import { useTypewriter } from 'react-simple-typewriter'
 
 import { motion } from "framer-motion";
 
@@ -24,11 +24,20 @@ const singleWord = {
         opacity:1,
         y:0,
         transition:{
-            duration:1,
+            duration:5,
         }
     }
 }
 const AnimatedText = ({text, className=""}:{text:string, className:string}) => {
+    // React simple typewriter 
+const [typetext, count] = useTypewriter({
+    words : ["Development Services", "Consultant Services", "Freelancer Services", ],
+    loop : true,
+    delaySpeed : 2000,
+    typeSpeed : 60,
+    // deleteSpeed : 100,
+    
+  })
     return ( 
     <div className="w-full  py-2 flex items-center  text-center overflow-hidden">
        <motion.h1 className={`inline-block w-full text-dark font-bold capitalize text-7xl  ${className}`}
@@ -46,6 +55,8 @@ const AnimatedText = ({text, className=""}:{text:string, className:string}) => {
         </motion.span>
         )
      }
+    <br/>
+     <h1 className=' text-red-500'>{typetext}</h1>
        </motion.h1>
        
     </div> );
