@@ -212,7 +212,7 @@ function NavList() {
   );
 }
  
-export default function Example() {
+export default function Nav() {
   const [openNav, setOpenNav] = React.useState(false);
  
   React.useEffect(() => {

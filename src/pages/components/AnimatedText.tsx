@@ -1,4 +1,5 @@
-'use client';
+"use client"
+
 import { useTypewriter } from 'react-simple-typewriter'
 
 import { motion } from "framer-motion";
@@ -56,7 +57,7 @@ const [typetext, count] = useTypewriter({
         )
      }
     <br/>
-     <h1 className=' text-red-500'>{typetext}</h1>
+     <div className=' text-red-500'>{typetext}</div>
        </motion.h1>
        
     </div> );
