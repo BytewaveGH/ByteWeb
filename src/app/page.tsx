@@ -11,6 +11,7 @@ import SoftwareWheel from '@/pages/components/softwareWheel'
 import Image from 'next/image'
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import PageSecExtended from '@/pages/components/pageSecExtend'
+import WWU from "@/pages/components/wwu";
 
 
 
@@ -158,6 +159,10 @@ export default function Home() {
           classname="flex text-3xl justify-start items-start font-bold tracking-tight text-gray-900 sm:text-4xl"
           imageClassname="h-full w-full"
           />
+      </div>
+
+      <div>
+        <WWU />
       </div>
 
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
