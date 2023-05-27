@@ -1,3 +1,5 @@
+"use client"
+
 import { Typography } from "@material-tailwind/react";
  
 const LINKS = [
@@ -20,10 +22,10 @@ const currentYear = new Date().getFullYear();
 export default function NavFooter() {
   return (
     <footer className="relative w-full">
-      <div className="mx-auto w-full max-w-7xl px-8">
-        <div className="grid grid-cols-1 justify-between  md:grid-cols-2">
-          <Typography variant="h5" className="mb-6 w">
-            Material Tailwind
+      <div className=" w-full max-w-7xl ">
+        <div className="grid grid-cols-1  md:grid-cols-2">
+          <Typography variant="h1" className="mb-6 w italic">
+            ByteWave 
           </Typography>
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items }) => (

@@ -23,9 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Layout className='w-full bg-red-600'>
+        <Layout className='w-full'>
           <Nav />
-          <Content className="site-layout" style={{ padding: '0 50px' }}>
+          <Content className="site-layout" >
           
               {children}
 
