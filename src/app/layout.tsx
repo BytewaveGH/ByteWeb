@@ -1,14 +1,13 @@
-"use client"
+
+import MainLayout from '@/pages/Main';
 import './globals.css'
 import { Inter } from 'next/font/google'
 import React from 'react';
-import { Layout, Menu, theme } from 'antd';
-import Nav from '@/pages/components/navbar';
-import NavFooter from '@/pages/components/footer';
+
 
 
 const inter = Inter({ subsets: ['latin'] })
-const { Header, Content, Footer } = Layout;
+
 
 // export const metadata = {
 //   title: 'Create Next App',
@@ -23,19 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Layout className='w-full'>
-          <Nav />
-          <Content className="site-layout" >
-          
-              {children}
-
-              
-          </Content>
-          <Footer style={{ textAlign: 'center' }}>
-            <NavFooter />
-          </Footer>
-        </Layout>
         
+          <MainLayout child={children} />
+
       </body>
     </html>
   )
