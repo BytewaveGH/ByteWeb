@@ -21,8 +21,8 @@ const currentYear = new Date().getFullYear();
  
 export default function NavFooter() {
   return (
-    <footer className="relative w-full">
-      <div className=" w-full max-w-7xl ">
+    <footer className="relative w-full mt-5">
+      <div className=" w-full max-w-7xl mt-2 ">
         <div className="grid grid-cols-1  md:grid-cols-2">
           <Typography variant="h1" className="mb-6 w italic">
             ByteWave 
@@ -58,7 +58,7 @@ export default function NavFooter() {
             variant="small"
             className="mb-4 text-center font-normal text-blue-gray-900 md:mb-0"
           >
-            &copy; {currentYear} <a href="https://material-tailwind.com/">Material Tailwind</a>. All
+            &copy; {currentYear} <a href="#">Bytewave Inc</a>. All
             Rights Reserved.
           </Typography>
           <div className="flex gap-4 text-blue-gray-900 sm:justify-center">

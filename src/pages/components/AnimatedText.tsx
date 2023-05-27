@@ -40,7 +40,7 @@ const [typetext, count] = useTypewriter({
     
   })
     return ( 
-    <div className="w-full  py-2 flex items-center  text-center overflow-hidden">
+    <div className="w-full px-10  py-2 flex items-center  text-center overflow-hidden">
        <motion.h1 className={`inline-block w-full text-dark font-bold capitalize text-7xl  ${className}`}
        variants={quote}
        initial="initial"
