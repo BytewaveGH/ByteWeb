@@ -63,9 +63,9 @@ const links = [
               </p>
             </div>
             {/* animated arrow */}
-            <div style={{width:'20%'}} className='text-white flex-col items-center justify-center '>
-              <div className="animate-bounce flex-col items-center justify-center">
-                <Image src={rightarrow} alt='right arrow' width={100} height={100} />
+            <div style={{width:'20%'}} className='text-white py-24 h-full items-center justify-center '>
+              <div className="animate-bounce flex items-center justify-center ">
+                <Image src={rightarrow} alt='right arrow' width={100} height={100} className='items-center justify-center' />
               </div>
             </div>
 
