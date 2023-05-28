@@ -12,6 +12,7 @@ import Image from 'next/image'
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import PageSecExtended from '@/pages/components/pageSecExtend'
 import WWU from "@/pages/components/wwu";
+import CTABanner from "@/pages/components/banner";
 
 
 
@@ -161,6 +162,17 @@ export default function Home() {
           />
       </div>
 
+      {/* CTA */}
+      <div>
+        <CTABanner />
+      </div>
+
+      {/*   How we deliver our services using agile  */}
+      <div>
+
+      </div>
+
+    {/* Work with US */}
       <div>
         <WWU />
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import laptop from '../../../public/laptops.jpg';
+import rightarrow from '../../../public/rightarrow.png'
 import Image from 'next/image';
 import { Button, Form, Input, InputNumber } from 'antd';
 import { layout } from './variantComp';
@@ -62,9 +63,9 @@ const links = [
               </p>
             </div>
             {/* animated arrow */}
-            <div style={{width:'20%'}} className='text-white '>
-              <div className="animate-bounce w-6 h-6 ...">
-                pa
+            <div style={{width:'20%'}} className='text-white flex-col items-center justify-center '>
+              <div className="animate-bounce flex-col items-center justify-center">
+                <Image src={rightarrow} alt='right arrow' width={100} height={100} />
               </div>
             </div>
 
