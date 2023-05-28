@@ -1,6 +1,9 @@
 import React from 'react';
 import laptop from '../../../public/laptops.jpg';
+import rightarrow from '../../../public/rightarrow.png'
 import Image from 'next/image';
+import { Button, Form, Input, InputNumber } from 'antd';
+import { layout } from './variantComp';
 
 
 const links = [
@@ -18,7 +21,7 @@ const links = [
   
   export default function WWU() {
     return (
-      <div className="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32 mx-32">
+      <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-20 mx-32">
         <img
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
           alt=""
@@ -50,22 +53,71 @@ const links = [
           />
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Work with us</h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
-              fugiat veniam occaecat fugiat aliqua.
-            </p>
+          <div className="mx-auto w-full flex  lg:mx-0">
+            {/* work with us  */}
+            <div className='w-2/5' >
+              <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Work with us</h2>
+              <p className="mt-6 text-lg leading-8 text-gray-300">
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
+                fugiat veniam occaecat fugiat aliqua.
+              </p>
+            </div>
+            {/* animated arrow */}
+            <div style={{width:'20%'}} className='text-white py-24 h-full items-center justify-center '>
+              <div className="animate-bounce flex items-center justify-center ">
+                <Image src={rightarrow} alt='right arrow' width={100} height={100} className='items-center justify-center' />
+              </div>
+            </div>
+
+            {/* Contact form */}
+
+            <div className='text-white w-2/5'>
+             <Form
+                labelCol={ {span: 8, color:'#fff', } }
+                wrapperCol={ {span: 16} }
+                name="nest-messages"
+                className=''
+                // onFinish={onFinish}
+                // style={{ color:'red' }}
+          
+                // validateMessages={validateMessages}
+              >
+                <Form.Item name={['user', 'name']} label={<p className='text-white'>Name</p>} rules={[{ required: false }]}>
+                  <Input />
+                </Form.Item>
+                <Form.Item name={['user', 'email']} label={<p className='text-white'>Email</p>} rules={[{ type: 'email', required: true }]}>
+                  <Input />
+                </Form.Item>
+                
+                <Form.Item name={['user', 'contact']} label={<p className='text-white'>Contact</p>} rules={[{type: 'number'}]}>
+                  <Input />
+                </Form.Item>
+                <Form.Item name={['user', 'message']} label={<p className='text-white'>Message</p>}>
+                  <Input.TextArea />
+                </Form.Item>
+                <Form.Item wrapperCol={{ offset: 8 }}>
+                  <div className='flex justify-evenly items-center'>
+                    <Button type="primary" htmlType="submit">
+                    Submit
+                    </Button>
+                    <p className='items-center text-white '>OR</p>
+                    <Button type="primary" htmlType="submit">
+                    Registration =={'>'}
+                    </Button>
+                  </div>
+                </Form.Item>
+              </Form>
+            </div>
           </div>
-          <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+          <div className="mx-auto  max-w-2xl lg:mx-0 lg:max-w-none">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-4 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
               {links.map((link) => (
                 <a key={link.name} href={link.href}>
                   {link.name} <span aria-hidden="true">&rarr;</span>
                 </a>
               ))}
             </div>
-            <dl className="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
+            <dl className=" grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
               {stats.map((stat) => (
                 <div key={stat.name} className="flex flex-col-reverse">
                   <dt className="text-base leading-7 text-gray-300">{stat.name}</dt>

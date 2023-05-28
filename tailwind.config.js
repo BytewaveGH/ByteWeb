@@ -2,6 +2,10 @@
 
 const withMT = require("@material-tailwind/react/utils/withMT");
 
+
+const {fontFamily} = require('tailwindcss/defaultTheme')
+
+
 module.exports = withMT({
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -10,6 +14,9 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      fontFamily: {
+        mont: ['var(--font-mont)', ...fontFamily.sans],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
