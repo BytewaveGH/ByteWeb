@@ -13,30 +13,37 @@ import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/2
 import PageSecExtended from '@/pages/components/pageSecExtend'
 import WWU from "@/pages/components/wwu";
 import CTABanner from "@/pages/components/banner";
-
-
+import DevPros from "@/pages/components/devPros";
+import tryx from '../../public/try.webp';
+import Tool_Tech from "@/pages/components/tools_technologies";
+import CompaniesWeServe from "@/pages/components/companiesWeserve";
+import mobiledev from '../../public/2209.i201.033.S.m004.c13.mobile app development isometric flowchart.jpg'
+import hackathon from '../../public/85z_2202_w012_n001_40a_p23_40.jpg'
+import elearning from '../../public/elearning.jpg'
+import organization from '../../public/7199788_30496.jpg'
+import webdev from '../../public/web-dev.webp'
 
 export default function Home() {
 
   const callouts = [
     {
-      name: 'Desk and Office',
+      name: 'Organiztions Needs',
       description: 'Work from home accessories',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg',
+      imageSrc: organization,
       imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
       href: '#',
     },
     {
-      name: 'Self-Improvement',
+      name: 'Learning Code Online',
       description: 'Journals and note-taking',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg',
+      imageSrc: elearning,
       imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
       href: '#',
     },
     {
-      name: 'Travel',
+      name: 'Open Source Community',
       description: 'Daily commute essentials',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg',
+      imageSrc: hackathon,
       imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
       href: '#',
     },
@@ -45,38 +52,25 @@ export default function Home() {
     {
       name: 'Desk and Office',
       description: 'Work from home accessories Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-01.jpg',
+      imageSrc: mobiledev,
       imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
       href: '#',
     },
     {
       name: 'Self-Improvement',
       description: 'Journals and note-taking Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg',
+      imageSrc: webdev,
       imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
       href: '#',
     },
     {
       name: 'Travel',
       description: 'Daily commute essentials Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg',
+      imageSrc: mobiledev,
       imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
       href: '#',
     },
-    {
-      name: 'Travel',
-      description: 'Daily commute essentials Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg',
-      imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-      href: '#',
-    },
-    {
-      name: 'Travel',
-      description: 'Daily commute essentials',
-      imageSrc: 'https://tailwindui.com/img/ecommerce-images/home-page-02-edition-03.jpg',
-      imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
-      href: '#',
-    },
+    
   ]
   const features = [
   {
@@ -101,24 +95,25 @@ export default function Home() {
 
   return (
     <div className="w-full min-h-screen   ">
-      <div className=" w-full h-full flex items-center justify-between font-mono text-sm ">
+      <div className=" w-full h-full flex items-center justify-between font-mono text-sm bg-white">
        
-          <div className='w-1/2 h-full  justify-center items-center'>
+          <div className='w-1/2 h-full  justify-center items-center bg-white'>
             <div className='w-full justify-center items-center '>
               
-            <AnimatedText className={'justify-center items-center '} text={`Custom software `} />
-            <p className="mt-4  mx-auto w-4/5 text-lg leading-8 text-gray-600">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-              pulvinar et feugiat blandit at. In mi viverra elit nunc.
-            </p>
+                <AnimatedText className={'justify-center items-center '} text={`Custom software `} />
+                <p className="mt-4  mx-auto w-4/5 text-lg leading-8 text-gray-600">
+                  Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
+                  pulvinar et feugiat blandit at. In mi viverra elit nunc.
+                </p>
             </div>
-            <div className=' '>
+            <div className='h-full '>
               <SoftwareWheel />
             </div>
 
           </div>
-          <div className="w-1/2  bg-gradient-to-t from-white via-white dark:from-black dark:via-black ">
-            <Carousel_Component />
+          <div className="w-1/2 h-full bg-gradient-to-t from-white via-white dark:from-black dark:via-black ">
+            {/* <Carousel_Component /> */}
+            <Image src={tryx} alt={"Picture of team laptops "} className="justify-center items-center"   />
           </div>
 
       
@@ -141,7 +136,7 @@ export default function Home() {
        <div>
         <PageSec />
       </div>
-      {/* cta extended */}
+      {/* cta extended of the 3 differences*/}
       <div>
         <PageSecExtended leftSide={features} rightSide={[]} imageRight={true} />
       </div>
@@ -152,6 +147,7 @@ export default function Home() {
         <PageSecExtended leftSide={features} rightSide={[]} imageRight={true} />
       </div>
       {/* services */}
+      {/* will need a scroll horizontal effect */}
       <div>
         <Diffs 
           callouts={services} 
@@ -169,12 +165,24 @@ export default function Home() {
 
       {/*   How we deliver our services using agile  */}
       <div>
-
+        <DevPros />
       </div>
+
+      {/* Tool and technologies  */}
+      <div>
+          <Tool_Tech />
+      </div>
+
+      
 
     {/* Work with US */}
       <div>
         <WWU />
+      </div>
+
+      {/* Companies we serve */}
+      <div>
+        <CompaniesWeServe />
       </div>
 
       {/* <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">

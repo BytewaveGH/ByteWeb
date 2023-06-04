@@ -18,54 +18,27 @@ import Image from 'next/image';
 // };
 
 const App: React.FC = () => (
-  <Carousel dotPosition={'top'} autoplay>
+  <Carousel  autoplay>
     <div style={{backgroundImage : `url(${laptop})`,}} className="h-full w-full  ">
       <h3>1</h3>
         <Image src={laptop} alt=""  />
-        <div className='w-full flex items-center justify-center'>
-            <Button >
-                Explore
-                </Button>
-                <Button >
-                Gallery
-            </Button>
-        </div>
+       
+        
     </div>
     <div>
       <h3 style={{}}>2</h3>
       <Image src={laptop} alt=""  />
-        <div className='w-full flex items-center justify-center '>
-            <Button >
-                Explore
-                </Button>
-                <Button >
-                Gallery
-            </Button>
-        </div>
+        
     </div>
     <div>
       <h3 style={{}}>3</h3>
       <Image src={laptop} alt=""  />
-        <div className='w-full flex items-center justify-center '>
-            <Button >
-                Explore
-                </Button>
-                <Button >
-                Gallery
-            </Button>
-        </div>
+        
     </div>
     <div>
       <h3 style={{}}>4</h3>
       <Image src={laptop} alt="" />
-        <div className='w-full flex items-center justify-center  '>
-            <Button >
-                Explore
-                </Button>
-                <Button >
-                Gallery
-            </Button>
-        </div>
+       
     </div>
   </Carousel>
 );
