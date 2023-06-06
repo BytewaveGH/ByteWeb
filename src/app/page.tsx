@@ -106,9 +106,9 @@ export default function Home() {
                   pulvinar et feugiat blandit at. In mi viverra elit nunc.
                 </p>
             </div>
-            <div className='h-full '>
+            {/* <div className='h-full '>
               <SoftwareWheel />
-            </div>
+            </div> */}
 
           </div>
           <div className="w-1/2 h-full bg-gradient-to-t from-white via-white dark:from-black dark:via-black ">
