@@ -2,7 +2,7 @@ import Image from "next/image"
 import laptop from '../../../public/laptops.jpg'
 
 
-export default function PageSecExtended({leftSide, rightSide, imageRight}:{leftSide:any, rightSide:any, imageRight: boolean}) {
+export default function PageSecExtended({leftSide, rightSide, imageRight,images}:{leftSide:any, rightSide:any, imageRight: boolean,images:any}) {
   return (
     <div className="overflow-hidden bg-white py-10 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -31,13 +31,13 @@ export default function PageSecExtended({leftSide, rightSide, imageRight}:{leftS
             </div>
           </div>
           
-          <Image src={laptop } alt="" width={650} height={600} /> 
+          <Image src={images } alt="" width={650} height={600} /> 
           
         </div>
         :
 
         <div className="mx-auto grid  grid-cols-1 gap-x-8 gap-y-10 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-           <Image src={laptop } alt="" width={650} height={600} /> 
+           <Image src={images } alt="" width={650} height={600} /> 
 
           <div className="lg:pr-8 lg:pt-4">
             <div className="lg:max-w-lg">

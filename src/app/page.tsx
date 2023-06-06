@@ -22,6 +22,9 @@ import hackathon from '../../public/85z_2202_w012_n001_40a_p23_40.jpg'
 import elearning from '../../public/elearning.jpg'
 import organization from '../../public/7199788_30496.jpg'
 import webdev from '../../public/web-dev.webp'
+import org from '../../public/15329397_1904.i402.011_Web development isometric concept infographics.jpg'
+import bloc from '../../public/blog-blogging-digital-networking-www-global-concept.jpg'
+import tec from '../../public/22635334_6664805.jpg'
 
 export default function Home() {
 
@@ -72,6 +75,10 @@ export default function Home() {
     },
     
   ]
+
+  // For Extension
+
+  const PEI = [org,bloc,tec]
   const features = [
   {
     name: 'Push to deploy.',
@@ -95,7 +102,7 @@ export default function Home() {
 
   return (
     <div className="w-full min-h-screen   ">
-      <div className=" w-full h-full flex items-center justify-between font-mono text-sm bg-white">
+      <div className=" w-full  flex items-center justify-between font-mono text-sm bg-white">
        
           <div className='w-1/2 h-full  justify-center items-center bg-white'>
             <div className='w-full justify-center items-center '>
@@ -138,13 +145,13 @@ export default function Home() {
       </div>
       {/* cta extended of the 3 differences*/}
       <div>
-        <PageSecExtended leftSide={features} rightSide={[]} imageRight={true} />
+        <PageSecExtended leftSide={features} rightSide={[]} imageRight={true} images={PEI[0]} />
       </div>
        <div>
-        <PageSecExtended leftSide={features} rightSide={[]} imageRight={false} />
+        <PageSecExtended leftSide={features} rightSide={[]} imageRight={false} images={PEI[2]} />
       </div>
       <div>
-        <PageSecExtended leftSide={features} rightSide={[]} imageRight={true} />
+        <PageSecExtended leftSide={features} rightSide={[]} imageRight={true} images={PEI[1]} />
       </div>
       {/* services */}
       {/* will need a scroll horizontal effect */}
