@@ -38,6 +38,9 @@ import firebase from '../../../public/firebase.png'
 import vb from '../../../public/vb.png'
 import sqlite from '../../../public/sqlite.png'
 import next from '../../../public/next.png'
+import python from '../../../public/python2.png'
+import redis from '../../../public/redis.png'
+import dynamo from '../../../public/dynamo.png'
 
 
 
@@ -63,6 +66,7 @@ export default function Tool_Tech() {
         {id: 12, img: angular, name:"",},
         {id: 13, img: andriod, name:"Andriod Studio",},
         {id: 14, img: next, name:"Next Js",},
+        {id: 15, img: xd, name:"Adobe XD",},
       ]
 
 
@@ -81,13 +85,14 @@ export default function Tool_Tech() {
         {id: 4, img: dart, name:"",},
         {id: 5, img: go, name:"",},
         {id: 6, img: vb, name:"",},
+        {id: 6, img: python, name:"",},
        
       ]
       
     },
  
     {
-      label: "Databases and Servers",
+      label: "Databases",
       value: "vue",
       // desc: [mysql, sql, mongo,postgress,firebase,sqlite],
       desc: [
@@ -97,6 +102,8 @@ export default function Tool_Tech() {
         {id: 3, img: postgress, name:"",},
         {id: 4, img: firebase, name:"",},
         {id: 5, img: sqlite, name:"",},
+        {id: 6, img: redis, name:"",},
+        {id: 7, img: dynamo, name:"DynamoDB",},
         
       ]
       
