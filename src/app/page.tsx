@@ -160,7 +160,7 @@ export default function Home() {
           callouts={services} 
           title={"Our Services"} 
           isclass={true} 
-          classname="flex text-3xl justify-start items-start font-bold tracking-tight text-gray-900 sm:text-4xl"
+          classname=" py-5 flex text-3xl justify-start items-start font-bold tracking-tight text-gray-900 sm:text-4xl"
           imageClassname="h-full w-full"
           />
       </div>

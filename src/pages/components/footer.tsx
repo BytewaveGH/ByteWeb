@@ -1,6 +1,8 @@
 "use client"
 
 import { Typography } from "@material-tailwind/react";
+import footerBackground from '../../../public/footer.jpg'
+import Image from "next/image";
  
 const LINKS = [
   {
@@ -21,8 +23,10 @@ const currentYear = new Date().getFullYear();
  
 export default function NavFooter() {
   return (
-    <footer className="relative w-full mt-5">
-      <div className=" w-full max-w-7xl mt-2 ">
+    <footer  className="relative w-full mt-5 bg">
+      
+      <div  className=" w-full max-w-7xl mt-2 ">
+      
         <div className="grid grid-cols-1  md:grid-cols-2">
           <Typography variant="h1" className="mb-6 w italic">
             ByteWave 

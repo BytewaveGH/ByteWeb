@@ -98,7 +98,7 @@ const links = [
                 <Form.Item wrapperCol={{ offset: 8 }}>
                   <div className='flex justify-evenly items-center'>
                     <Button type="primary" htmlType="submit">
-                    Submit
+                        Let's build Something
                     </Button>
                     <p className='items-center text-white '>OR</p>
                     <Button type="primary" htmlType="submit">

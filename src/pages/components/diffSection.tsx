@@ -21,11 +21,11 @@ export default function Diffs({callouts, title,pdetails, ispdetails=false, class
   return (
     <div className="bg-gray-100 text-black">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <p className={isclass ? classname : "flex text-3xl justify-center items-center font-bold tracking-tight text-gray-900 sm:text-4xl"}>
+        <p className={isclass ? classname : "flex text-3xl  justify-center items-center font-bold tracking-tight text-gray-900 sm:text-4xl "}>
                 {title}
         </p>
         {}
-        <div className="mx-auto max-w-2xl py-20 sm:py-20  lg:max-w-none lg:py-20">
+        <div className="mx-auto max-w-2xl py-20 sm:py-20  lg:max-w-none lg:py-16">
           <div className="mt-3 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
             {callouts?.map((callout:any) => (
               <div key={callout.name} className="group relative">
