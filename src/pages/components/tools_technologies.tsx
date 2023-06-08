@@ -85,7 +85,7 @@ export default function Tool_Tech() {
         {id: 4, img: dart, name:"",},
         {id: 5, img: go, name:"",},
         {id: 6, img: vb, name:"",},
-        {id: 6, img: python, name:"",},
+        {id: 7, img: python, name:"",},
        
       ]
       

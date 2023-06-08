@@ -33,16 +33,16 @@ const features = [
 
 export default function WhyByte() {
   return (
-    <div className=" w-full justify-center py-24 sm:py-12">
+    <div className=" w-full justify-center py-16 sm:py-12">
       <div className=" w-full justify-center items-center lg:px-8">
         <div className="w-full justify-center items-center  lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600">Deploy faster</h2>
-          <p className=" text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Everything you need to deploy your app
+          <h2 className="text-base font-semibold leading-7 text-indigo-600 italic">Bytewave</h2>
+          <p className="mx-auto w-1/3 text-9xl uppercase  font-bold tracking-tight text-gray-900 sm:text-4xl" >
+              Building a perfect solution according to your business goals
           </p>
           <p className="mt-4  mx-auto w-1/3 text-lg leading-8 text-gray-600">
-            Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-            pulvinar et feugiat blandit at. In mi viverra elit nunc.
+              Driven by experienced teams and an agile framework, we prioritize our 
+              clients' commercial goals to deliver exceptional business value.  
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

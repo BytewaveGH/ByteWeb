@@ -102,35 +102,39 @@ export default function Home() {
 
   return (
     <div className="w-full min-h-screen   ">
-      <div className=" w-full  flex items-center justify-between font-mono text-sm bg-white">
-       
-          <div className='w-1/2 h-full  justify-center items-center bg-white'>
-            <div className='w-full justify-center items-center '>
-              
-                <AnimatedText className={'justify-center items-center '} text={`Custom software `} />
-                <p className="mt-4  mx-auto w-4/5 text-lg leading-8 text-gray-600">
-                  Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
-                  pulvinar et feugiat blandit at. In mi viverra elit nunc.
-                </p>
-            </div>
-            {/* <div className='h-full '>
-              <SoftwareWheel />
-            </div> */}
+      <div className="w-full">
+          <div className=" w-full py-44 flex items-center justify-between font-mono text-sm bg-white">
+            
+            <div className='w-1/2 h-full  justify-center items-center bg-white'>
+              <div className='px-32 w-full justify-center items-center '>
+                
+                  <AnimatedText className={' mx-auto justify-center items-center text-start leading-tight '} text={`Pioneering the future  of the digital world with innovation and expertise. `} />
+                  <p className="mt-4  mx-auto w-4/5 text-lg leading-8 text-gray-600">
+                    Quis tellus eget adipiscing convallis sit sit eget aliquet quis. Suspendisse eget egestas a elementum
+                    pulvinar et feugiat blandit at. In mi viverra elit nunc.
+                  </p>
+              </div>
+              {/* <div className='h-full '>
+                <SoftwareWheel />
+              </div> */}
 
+            </div>
+            <div className="w-1/2 h-full bg-gradient-to-t from-white via-white dark:from-black dark:via-black ">
+              {/* <Carousel_Component /> */}
+              <Image src={tryx} alt={"Picture of team laptops "} className="justify-center items-center"   />
+            </div>
+
+            
+        </div>
+        <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
+            <LogoCloud />
           </div>
-          <div className="w-1/2 h-full bg-gradient-to-t from-white via-white dark:from-black dark:via-black ">
-            {/* <Carousel_Component /> */}
-            <Image src={tryx} alt={"Picture of team laptops "} className="justify-center items-center"   />
-          </div>
+      </div>
 
       
-      </div>
-
      
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-          <LogoCloud />
-      </div>
+      
       {/* why byte */}
       <div>
         <WhyByte />

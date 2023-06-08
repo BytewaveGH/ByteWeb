@@ -53,7 +53,7 @@ const navListMenuItems = [
   {
     color: "orange",
     icon: ChatBubbleOvalLeftIcon,
-    title: "Press",
+    title: "Forum",
     description: "News and writings, press releases, and resources",
   },
   {
@@ -76,13 +76,13 @@ const navListMenuItems = [
   {
     color: "blue-gray",
     icon: FolderIcon,
-    title: "Legal",
+    title: "Case Studies",
     description: "All the stuff that we dan from legal made us add.",
   },
   {
     color: "purple",
     icon: RocketLaunchIcon,
-    title: "Products",
+    title: "Our Services",
     description: "Checkout our products that helps a startup running.",
   },
   {

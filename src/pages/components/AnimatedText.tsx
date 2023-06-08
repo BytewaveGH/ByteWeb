@@ -42,7 +42,7 @@ const [typetext, count] = useTypewriter({
   })
     return ( 
     <div className="w-full px-4 py-2 flex items-center  text-center overflow-hidden">
-       <motion.h1 className={`inline-block w-full text-dark font-bold capitalize text-7xl  ${className}`}
+       <motion.h1 className={`mx-auto justify-center items-center inline-block w-full text-dark font-bold capitalize text-5xl  ${className}`}
        variants={quote}
        initial="initial"
        animate="animate"
