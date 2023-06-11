@@ -1,38 +1,34 @@
 'use client'
 
 import Experience from '@/pages/Experience'
-import { Timeline } from 'antd'
-import React from 'react'
-
-type Props = {}
+import { Steps } from 'antd'
+import React, { useState } from 'react'
 
 export default function About(){
+
+  const [current, setCurrent] = useState(1);
+
+const steps = [
+  {
+    title: <p className='hover:cursor-pointer' onClick={()=>{setCurrent(0)}}>First</p>,
+    content: <Experience />,
+  },
+  {
+    title:  <p className='hover:cursor-pointer' onClick={()=>{setCurrent(1)}}>Second</p>,
+    content:<Experience />,
+  },
+  {
+    title:  <p className='hover:cursor-pointer' onClick={()=>{setCurrent(2)}}>Last</p>,
+    content: <Experience />,
+  },
+];
+
+  const items = steps.map((item) => ({ key: item.title, title: item.title }));
   return (
-    <>
-    <Experience />
-    {/* <div className="w-1/4">
-         <h2>What will happen next?</h2>
-         <p>We will get back to you within 24 hours</p>
-         <p>You are a step closer to building great software</p>
- <div className="mt-40">
-         <Timeline
-     items={[
-       {
-         children: 'Create a services site 2015-09-01',
-       },
-       {
-         children: 'Solve initial network problems 2015-09-01',
-       },
-       {
-         children: 'Technical testing 2015-09-01',
-       },
-       {
-         children: 'Network problems being solved 2015-09-01',
-       },
-     ]}
-   />
-   </div>
-    </div> */}
-     </>
+    <div className='mt-[20px] mx-[20px]'>
+     <Steps current={current} items={items} />
+     <div >{steps[current].content}</div>
+    
+     </div>
   )
 }
