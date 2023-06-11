@@ -5,9 +5,9 @@ import CarouselWC from './carouselWC'
 
 const includedFeatures = [
   'Private forum access',
-  'Member resources',
+  'Open source member resources',
   'Entry to annual conference',
-  'Official member t-shirt',
+  'Quality of service',
 ]
 
 export default function PageSec() {

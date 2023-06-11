@@ -21,7 +21,7 @@ const links = [
   
   export default function WWU() {
     return (
-      <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-20 mx-32">
+      <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-20 md:mx-20">
         <img
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
           alt=""
@@ -53,9 +53,9 @@ const links = [
           />
         </div>
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto w-full flex  lg:mx-0">
+          <div className="mx-auto w-full lg:flex  lg:mx-0">
             {/* work with us  */}
-            <div className='w-2/5' >
+            <div className='w-full lg:w-2/5' >
               <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">Work with us</h2>
               <p className="mt-6 text-lg leading-8 text-gray-300">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet
@@ -63,7 +63,7 @@ const links = [
               </p>
             </div>
             {/* animated arrow */}
-            <div style={{width:'20%'}} className='text-white py-24 h-full items-center justify-center '>
+            <div style={{width:'15%'}} className='invisible  lg:visible  text-white lg:py-24 h-full items-center justify-center '>
               <div className="animate-bounce flex items-center justify-center ">
                 <Image src={rightarrow} alt='right arrow' width={100} height={100} className='items-center justify-center' />
               </div>
@@ -71,7 +71,7 @@ const links = [
 
             {/* Contact form */}
 
-            <div className='text-white w-2/5'>
+            <div className='text-white w-full lg:w-2/5 '>
              <Form
                 labelCol={ {span: 8, color:'#fff', } }
                 wrapperCol={ {span: 16} }
@@ -95,14 +95,14 @@ const links = [
                 <Form.Item name={['user', 'message']} label={<p className='text-white'>Message</p>}>
                   <Input.TextArea />
                 </Form.Item>
-                <Form.Item wrapperCol={{ offset: 8 }}>
-                  <div className='flex justify-evenly items-center'>
-                    <Button type="primary" htmlType="submit">
+                <Form.Item className='w-full flex justify-end items-center' >
+                  <div className='flex w-full'>
+                    <Button type="primary" htmlType="submit" className=''>
                         Let's build Something
                     </Button>
-                    <p className='items-center text-white '>OR</p>
+                    <p className='invisible md:visible items-center text-white '>OR</p>
                     <Button type="primary" htmlType="submit">
-                    Registration =={'>'}
+                        Registration
                     </Button>
                   </div>
                 </Form.Item>

@@ -47,7 +47,7 @@ export default function NavFooter() {
                       as="a"
                       href="#"
                       color="gray"
-                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900"
+                      className="py-1.5 font-normal transition-colors hover:text-blue-gray-900 hover:underline"
                     >
                       {link}
                     </Typography>

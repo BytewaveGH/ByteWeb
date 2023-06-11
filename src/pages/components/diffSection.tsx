@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import tryx from '../../../public/ai.png'
 
 /*
   This example requires some changes to your config:
@@ -26,26 +27,37 @@ export default function Diffs({callouts, title,pdetails, ispdetails=false, class
         </p>
         {}
         <div className="mx-auto max-w-2xl py-20 sm:py-20  lg:max-w-none lg:py-16">
-          <div className="mt-3 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+          <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
             {callouts?.map((callout:any) => (
-              <div key={callout.name} className="group relative">
-                <div className={`relative overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64
-                 ${isclass ? imageClassname : '  h-80 w-full'}
-                `}>
-                  <Image src={callout.imageSrc} alt={callout.imageAlt}  className={"h-full w-full object-cover object-center"} />
-                  {/* <img
-                    src={callout.imageSrc}
-                    alt={callout.imageAlt}
-                    className={"h-full w-full object-cover object-center"}
-                  /> */}
+              <div key={callout.id}  className='bg-transparent group py-5 perspective  '>
+                <div className="relative  group-hover:my-rotate-y-180 duration-1000 preserve-3d  ">
+                  <div className={`relative  overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64
+                      ${isclass ? imageClassname : '  h-80 w-full'}
+                      `} >
+                      <div className=' group-hover:hidden duration-1000 perspective preserve-3d backface-hidden  '>
+                        <Image src={callout.imageSrc} alt={callout.imageAlt}  className={"h-full  w-full  object-cover object-center"} />
+                        
+                      </div>
+                      <div className='relative  w-full h-full bg-white text-black'>
+                            <div className='relative my-rotate-y-180  grid grid-cols-3 '>
+                              <h1>{callout.name}</h1>
+                              <h1>{callout.name}</h1>
+                              <h1>{callout.name}</h1>
+                              <h1>{callout.name}</h1>
+                              <h1>{callout.name}</h1>
+                              <h1>{callout.name}</h1>
+                            </div>
+                        </div>
+                  </div>
+                  
+                  <h3 className="mt-6 group-hover:my-rotate-y-180 text-lg text-gray-500">
+                    <a href={callout.href}>
+                      <span className="absolute inset-0 " />
+                      {callout.name}
+                    </a>
+                  </h3>
+                  <p className={`${isclass ? textClassname : " text-base font-semibold text-gray-900"}`}>{callout.description}</p>
                 </div>
-                <h3 className="mt-6 text-sm text-gray-500">
-                  <a href={callout.href}>
-                    <span className="absolute inset-0" />
-                    {callout.name}
-                  </a>
-                </h3>
-                <p className={`${isclass ? textClassname : "text-base font-semibold text-gray-900"}`}>{callout.description}</p>
               </div>
             ))}
           </div>

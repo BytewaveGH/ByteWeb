@@ -30,6 +30,7 @@ export default function Home() {
 
   const callouts = [
     {
+      id:0,
       name: 'Organiztions Needs',
       description: 'Work from home accessories',
       imageSrc: organization,
@@ -37,6 +38,7 @@ export default function Home() {
       href: '#',
     },
     {
+      id:1,
       name: 'Learning Code Online',
       description: 'Journals and note-taking',
       imageSrc: elearning,
@@ -44,6 +46,7 @@ export default function Home() {
       href: '#',
     },
     {
+      id:2,
       name: 'Open Source Community',
       description: 'Daily commute essentials',
       imageSrc: hackathon,
@@ -53,22 +56,50 @@ export default function Home() {
   ]
   const services = [
     {
-      name: 'Desk and Office',
-      description: 'Work from home accessories Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    
+      id:0,
+      name: 'Mobile development',
+      description: 'Work from home accessories Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ',
       imageSrc: mobiledev,
       imageAlt: 'Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug.',
       href: '#',
     },
     {
-      name: 'Self-Improvement',
-      description: 'Journals and note-taking Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      id:1,
+      name: 'Web development',
+      description: 'Journals and note-taking Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ',
       imageSrc: webdev,
       imageAlt: 'Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant.',
       href: '#',
     },
     {
-      name: 'Travel',
-      description: 'Daily commute essentials Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      id:2,
+      name: 'Web Design, Product Design, UI/UX, Illustrations',
+      description: 'Daily commute essentials Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ',
+      imageSrc: mobiledev,
+      imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
+      href: '#',
+    },
+    {
+      id:3,
+      name: 'Testing',
+      description: 'Daily commute essentials Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ',
+      imageSrc: mobiledev,
+      imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
+      href: '#',
+    },
+    {
+      id:4,
+      name: 'Code Debugging and Maintenance',
+      description: 'Daily commute essentials Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ',
+      imageSrc: mobiledev,
+      imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
+      href: '#',
+    },
+    {
+      id:5,
+      name: 'DevOps',
+      description: 'Daily commute essentials Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in ',
       imageSrc: mobiledev,
       imageAlt: 'Collection of four insulated travel bottles on wooden shelf.',
       href: '#',
@@ -103,10 +134,10 @@ export default function Home() {
   return (
     <div className="w-full min-h-screen   ">
       <div className="w-full">
-          <div className=" w-full py-44 flex items-center justify-between font-mono text-sm bg-white">
+          <div className=" w-full py-24 lg:flex items-center lg:justify-between font-mono text-sm bg-white">
             
-            <div className='w-1/2 h-full  justify-center items-center bg-white'>
-              <div className='px-32 w-full justify-center items-center '>
+            <div className='lg:w-1/2 h-full  justify-center items-center bg-white'>
+              <div className='lg:px-12 md:px-5 w-full justify-center items-center '>
                 
                   <AnimatedText className={' mx-auto justify-center items-center text-start leading-tight '} text={`Pioneering the future  of the digital world with innovation and expertise. `} />
                   <p className="mt-4  mx-auto w-4/5 text-lg leading-8 text-gray-600">
@@ -119,7 +150,7 @@ export default function Home() {
               </div> */}
 
             </div>
-            <div className="w-1/2 h-full bg-gradient-to-t from-white via-white dark:from-black dark:via-black ">
+            <div className="invisible lg:visible w-1/2 h-full bg-gradient-to-t from-white via-white dark:from-black dark:via-black ">
               {/* <Carousel_Component /> */}
               <Image src={tryx} alt={"Picture of team laptops "} className="justify-center items-center"   />
             </div>
@@ -141,7 +172,12 @@ export default function Home() {
       </div>
       {/* bytewave diffs */}
       <div>
-        <Diffs callouts={callouts} title={"The ByteWave Difference"} />
+        <Diffs 
+          callouts={callouts} 
+          title={"The ByteWave Difference"}
+          isclass={true} 
+          textClassname="group-hover:my-rotate-y-180 " 
+        />
       </div>
       {/* cta */}
        <div>
@@ -166,6 +202,7 @@ export default function Home() {
           isclass={true} 
           classname=" py-5 flex text-3xl justify-start items-start font-bold tracking-tight text-gray-900 sm:text-4xl"
           imageClassname="h-full w-full"
+          textClassname="group-hover:my-rotate-y-180 "
           />
       </div>
 

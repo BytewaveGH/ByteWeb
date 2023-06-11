@@ -48,6 +48,7 @@ import dynamo from '../../../public/dynamo.png'
 export default function Tool_Tech() {
   const data = [
     {
+      id:0,
       label: "Frameworks and Libraries",
       value: "html",
       desc: [
@@ -74,6 +75,7 @@ export default function Tool_Tech() {
       
     },
     {
+      id:1,
       label: "Programming Languages",
       value: "react",
       // desc: [java, js, react, php, c,dart,go,vb],
@@ -92,6 +94,7 @@ export default function Tool_Tech() {
     },
  
     {
+      id:2,
       label: "Databases",
       value: "vue",
       // desc: [mysql, sql, mongo,postgress,firebase,sqlite],
@@ -123,8 +126,8 @@ return (
         </div>
         <Tabs id="custom-animation" value="html" >
             <TabsHeader className="w-full z-0 ">
-                {data.map(({ label, value }) => (
-                <Tab key={value} value={value}>
+                {data.map(({ label, value,id }) => (
+                <Tab key={id} value={value}>
                     {label}
                 </Tab>
                 ))}
@@ -137,11 +140,11 @@ return (
                 }}
                 className="w-full border-4 "
             >
-                {data.map(({ value, desc,  }) => (
-                <TabPanel key={value} value={value} className="flex w-full flex-wrap px-2 justify-center ">
+                {data.map(({ value, desc, id }) => (
+                <TabPanel key={id} value={value} className="flex w-full flex-wrap px-2 justify-center ">
                     {desc.map((skills)=>{
                         return (
-                            <Card className="mt-6 w-64 h-28 flex mx-5 justify-center items-center ">
+                            <Card key={skills.id} className="mt-4 w-11/12  md:w-64 sm:w-60 h-28 flex flex-wrap mx-5 justify-center items-center ">
                                 <CardBody className="flex ">
                                     <Image src={skills.img} alt='tools'  quality={100} className="flex justify-center items-center" />
                                     {/* will use this to learn typo */}

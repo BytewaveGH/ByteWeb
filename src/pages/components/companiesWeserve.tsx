@@ -38,7 +38,7 @@ export default function CompaniesWeServe (){
             <div className='w-5/6 mx-auto flex flex-wrap px-2 justify-center items-center'>
                 {Industries.map((ind:any, index:number)=>{
                         return (
-                            <Card key={index} className="mt-6 w-48 h-48 relative flex mx-5  items-end transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
+                            <Card key={index} className="mt-6 w-full sm:w-48 sm:h-48 h-60 relative flex mx-5  items-end transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                                 <span className="animate-ping absolute inline-flex w-2 h-2 rounded-full  bg-blue-500 opacity-75 "></span>
                                 <span className="relative inline-flex w-2 h-2 rounded-full   bg-blue-500"></span>
                                 <CardBody className="w-full justify-center items-center ">

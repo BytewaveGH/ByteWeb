@@ -35,7 +35,7 @@ export default function CTABanner() {
           <svg viewBox="0 0 2 2" className="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true">
             <circle cx={1} cy={1} r={1} />
           </svg>
-          Join us in Denver from June 7 – 9 to see what’s coming next.
+          Join us Online let's build something from June 7 – 9 to see what’s coming next.
         </p>
         <a
           href="#"
