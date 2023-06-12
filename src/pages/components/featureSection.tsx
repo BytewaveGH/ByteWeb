@@ -8,25 +8,35 @@ const features = [
   {
     name: 'Push to deploy with advanced tech stacks',
     description:
-      'Morbi viverra dui mi arcu sed. Tellus semper adipiscing suspendisse semper morbi. Odio urna massa nunc massa.',
+      `We possess a team of highly skilled professionals with extensive expertise in developing custom software solutions. Our 
+      experience spans across various industries, allowing us to understand the unique challenges and requirements of different 
+      businesses`,
     icon: CloudArrowUpIcon,
   },
   {
     name: 'Guaranteed software quality with time-tested processes',
     description:
-      'Sit quis amet rutrum tellus ullamcorper ultricies libero dolor eget. Sem sodales gravida quam turpis enim lacus amet.',
+      `We adhere to stringent quality assurance practices to ensure the delivery of high-quality software solutions. 
+      From rigorous testing procedures to code reviews, we leave no stone unturned in ensuring that our solutions meet 
+      the highest industry standards and exceed your expectations.Our team is committed to meeting agreed-upon deadlines 
+      while maintaining the highest standards of quality. We follow efficient project management practices, 
+      keeping you informed about the progress and ensuring a smooth and timely delivery process.`,
     icon: LockClosedIcon,
   },
   {
     name: 'UI/UX design and ideation',
     description:
-      'Quisque est vel vulputate cursus. Risus proin diam nunc commodo. Lobortis auctor congue commodo diam neque.',
+      `Our commitment to innovation drives us to stay up-to-date with the latest technological advancements. We leverage 
+      cutting-edge tools and frameworks to create robust, scalable, and future-proof software solutions that empower your 
+      business to thrive in a rapidly evolving digital landscape.`,
     icon: ArrowPathIcon,
   },
   {
     name: 'Transparent communication and reporting',
     description:
-      'Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.',
+      `We believe in the power of collaboration. Our team works closely with you, fostering transparent communication 
+      and active involvement at every stage of thesoftware development lifecycle. We value your input, ensuring that 
+      your vision is at the core of the solution we build`,
     icon: FingerPrintIcon,
   },
 ]
@@ -45,8 +55,8 @@ export default function WhyByte() {
               clients' commercial goals to deliver exceptional business value.  
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+        <div className="mx-auto mt-16 w-full max-w-6xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+          <dl className="grid max-w-4xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {features.map((feature, index) => (
               <motion.div 
                 key={feature.name} 
