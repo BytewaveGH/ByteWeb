@@ -339,12 +339,12 @@ function NavListMenu2() {
     ({ icon, title, description, color }, key) => (
       <a href="#" key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div className={`rounded-lg p-5  ${colors[color]}`}>
+          <div className={`rounded-lg flex justify-items-center  ${colors[color]}`}>
             {/* {React.createElement(icon, {
               strokeWidth: 2,
               className: "h-6 w-6",
             })} */}
-            <Image src={icon} alt={"ji"}  className="w-3 h-3" />
+            <Image src={icon} alt={"ji"}  className="w-1/2 h-1/2 flex justify-items-center" />
           </div>
           <div>
             <Typography

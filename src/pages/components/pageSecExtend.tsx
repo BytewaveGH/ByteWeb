@@ -1,8 +1,9 @@
 import Image from "next/image"
 import laptop from '../../../public/laptops.jpg'
+import FAQ from "./Accordion"
 
 
-export default function PageSecExtended({leftSide, rightSide, imageRight,images}:{leftSide:any, rightSide:any, imageRight: boolean,images:any}) {
+export default function PageSecExtended({leftSide, rightSide, imageRight,images,useFAQ}:{leftSide:any, rightSide:any, imageRight?: boolean,images:any, useFAQ?:boolean}) {
   return (
     <div className="overflow-hidden bg-white py-10 sm:py-16">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -30,8 +31,12 @@ export default function PageSecExtended({leftSide, rightSide, imageRight,images}
               </dl>
             </div>
           </div>
-          
-          <Image src={images } alt="" width={650} height={600} /> 
+          {useFAQ ? 
+              <FAQ /> 
+              :
+              <Image src={images } alt="" width={650} height={600} />
+          }
+           
           
         </div>
         :
