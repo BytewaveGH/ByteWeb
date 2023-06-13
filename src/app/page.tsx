@@ -176,6 +176,7 @@ export default function Home() {
           callouts={callouts} 
           title={"The ByteWave Difference"}
           isclass={true} 
+          classname="flex text-3xl  justify-center items-center font-bold tracking-tight text-gray-900 sm:text-4xl"
           textClassname="group-hover:my-rotate-y-180 " 
         />
       </div>

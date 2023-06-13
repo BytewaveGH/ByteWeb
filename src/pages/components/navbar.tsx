@@ -33,6 +33,24 @@ import {
   GiftIcon,
 } from "@heroicons/react/24/outline";
 
+import js from '../../../public/js.png'
+import java from '../../../public/java.png'
+import react from '../../../public/react.png'
+import native from '../../../public/native.png'
+import php from '../../../public/php.png'
+import nodejs from '../../../public/nodejs.png'
+
+import go from '../../../public/go.png'
+
+import dotnet from '../../../public/dotnet.png'
+import flutter from '../../../public/flutter.png'
+import laravel from '../../../public/laravel.png'
+import kotlin from '../../../public/kotlin.png'
+import andriod from '../../../public/andriod.png'
+
+import Image from "next/image";
+
+
 
 const colors:any = {
   blue: "bg-blue-50 text-blue-500",
@@ -112,19 +130,19 @@ const navListMenuItems = [
 const hireDev = [
   {
     color: "blue",
-    icon: FlagIcon,
+    icon: php,
     title: "App Developers",
-    description: "Learn about our story and our mission statement.",
+    description: "",
   },
   {
     color: "orange",
-    icon: ChatBubbleOvalLeftIcon,
+    icon: php,
     title: "Web Developers",
-    description: "News and writings, press releases, and resources",
+    description: "",
   },
   {
     color: "green",
-    icon: UsersIcon,
+    icon: php,
     title: (
       <div className="flex items-center gap-1">
         Careers{" "}
@@ -137,97 +155,97 @@ const hireDev = [
         />
       </div>
     ),
-    description: "We are always looking for talented people. Join us!",
+    description: "",
   },
   {
     color: "blue-gray",
-    icon: FolderIcon,
+    icon: php,
     title: "Software Developers",
-    description: "All the stuff that we dan from legal made us add.",
+    description: "",
   },
   {
     color: "purple",
-    icon: RocketLaunchIcon,
+    icon: php,
     title: "Full-stack Developers",
-    description: "Checkout our products that helps a startup running.",
+    description: "",
   },
   {
     color: "teal",
-    icon: FaceSmileIcon,
+    icon: php,
     title: "Frontend Developers",
-    description: "Set of beautiful icons that you can use in your project.",
+    description: "",
   },
   {
     color: "cyan",
-    icon: PuzzlePieceIcon,
+    icon: php,
     title: "Backend Developers",
-    description: "High quality UI Kits helps you to 2x faster.",
+    description: "",
   },
   {
     color: "pink",
-    icon: GiftIcon,
+    icon: go,
     title: "UI/UX Developers",
-    description: "List of all our open-source projects, it's all free.",
+    description: "",
   },
   {
     color: "pink",
-    icon: GiftIcon,
+    icon: andriod,
     title: "Andriod Developers",
-    description: "List of all our open-source projects, it's all free.",
+    description: "",
   },
   {
     color: "yellow",
-    icon: GiftIcon,
+    icon: flutter,
     title: "Flutter Developers",
-    description: "List of all our open-source projects, it's all free.",
+    description: "",
   },
   {
     color: "pink",
-    icon: GiftIcon,
+    icon: native,
     title: "React Native Developers",
-    description: "List of all our open-source projects, it's all free.",
+    description: "",
   },
   {
     color: "pink",
-    icon: GiftIcon,
+    icon: kotlin,
     title: "Kotlin Developers",
-    description: "List of all our open-source projects, it's all free.",
+    description: "",
   },
   {
     color: "pink",
-    icon: GiftIcon,
+    icon: java,
     title: "Java Developers",
-    description: "List of all our open-source projects, it's all free.",
+    description: "",
   },
   {
     color: "pink",
-    icon: GiftIcon,
+    icon: react,
     title: "React Developers",
-    description: "List of all our open-source projects, it's all free.",
+    description: "",
   },
   {
     color: "pink",
-    icon: GiftIcon,
+    icon: nodejs,
     title: "Node Developers",
-    description: "List of all our open-source projects, it's all free.",
+    description: "",
   },
   {
     color: "pink",
-    icon: GiftIcon,
+    icon: go,
     title: "Go Developers",
-    description: "List of all our open-source projects, it's all free.",
+    description: "",
   },
   {
     color: "pink",
-    icon: GiftIcon,
+    icon: dotnet,
     title: ".NET Developers",
-    description: "List of all our open-source projects, it's all free.",
+    description: "",
   },
   {
     color: "pink",
-    icon: GiftIcon,
+    icon: laravel,
     title: "Laraval Developers",
-    description: "List of all our open-source projects, it's all free.",
+    description: "",
   },
 ];
 
@@ -321,11 +339,12 @@ function NavListMenu2() {
     ({ icon, title, description, color }, key) => (
       <a href="#" key={key}>
         <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div className={`rounded-lg p-5 ${colors[color]}`}>
-            {React.createElement(icon, {
+          <div className={`rounded-lg p-5  ${colors[color]}`}>
+            {/* {React.createElement(icon, {
               strokeWidth: 2,
               className: "h-6 w-6",
-            })}
+            })} */}
+            <Image src={icon} alt={"ji"}  className="w-3 h-3" />
           </div>
           <div>
             <Typography
@@ -335,9 +354,9 @@ function NavListMenu2() {
             >
               {title}
             </Typography>
-            <Typography variant="small" color="gray" className="font-normal">
+            {/* <Typography variant="small" color="gray" className="font-normal">
               {description}
-            </Typography>
+            </Typography> */}
           </div>
         </MenuItem>
       </a>

@@ -55,8 +55,8 @@ export default function WhyByte() {
               clients' commercial goals to deliver exceptional business value.  
           </p>
         </div>
-        <div className="mx-auto mt-16 w-full max-w-6xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
-          <dl className="grid max-w-4xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+        <div className="mx-auto mt-16 w-full max-w-7xl sm:mt-20 lg:mt-24 lg:max-w-7xl">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
             {features.map((feature, index) => (
               <motion.div 
                 key={feature.name} 
