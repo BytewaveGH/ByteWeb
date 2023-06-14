@@ -93,6 +93,12 @@ const PEI = [org,bloc,tec]
           FAQHeadings='Herh chama' 
         />
       </div>
+
+      {/* What you will get  */}
+
+
+
+      {/* Our Products sample */}
     
     </div>
   )
