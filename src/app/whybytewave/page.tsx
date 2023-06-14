@@ -64,13 +64,34 @@ const PEI = [org,bloc,tec]
       {/* Accordions */}
 
       <div>
-        <PageSecExtended leftSide={features} rightSide={[]} imageRight={true} images={PEI[0]} useFAQ />
+        <PageSecExtended 
+          leftSide={features} 
+          rightSide={[]} 
+          imageRight={true} 
+          images={PEI[0]} 
+          useFAQ
+          FAQHeadings='Hey there'
+        />
       </div>
        <div>
-        <PageSecExtended leftSide={features} rightSide={[]} imageRight={false} images={PEI[2]} useFAQ />
+        <PageSecExtended 
+          leftSide={features} 
+          rightSide={[]} 
+          imageRight={false} 
+          images={PEI[2]} 
+          useFAQ
+          FAQHeadings={'Hello there'} 
+        />
       </div>
       <div>
-        <PageSecExtended leftSide={features} rightSide={[]} imageRight={true} images={PEI[1]} useFAQ />
+        <PageSecExtended 
+          leftSide={features} 
+          rightSide={[]} 
+          imageRight={true} 
+          images={PEI[1]} 
+          useFAQ
+          FAQHeadings='Herh chama' 
+        />
       </div>
     
     </div>

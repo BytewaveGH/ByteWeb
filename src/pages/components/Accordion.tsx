@@ -23,7 +23,7 @@ function Icon({ id, open }:any) {
   );
 }
  
-export default function FAQ() {
+export default function FAQ({headings}:{headings?: string}) {
   const [open, setOpen] = useState<any>(0);
  
   const handleOpen = (value:any) => {
@@ -32,6 +32,9 @@ export default function FAQ() {
  
   return (
     <Fragment>
+        <div className="text-4xl text-black py-5 justify-items-center">
+            {headings}
+        </div>
       <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
         <AccordionHeader onClick={() => handleOpen(1)}>
           What is Material Tailwind?
