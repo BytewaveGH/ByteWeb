@@ -29,16 +29,18 @@ export default function CompaniesWeServe (){
     return (
 
         <div className='mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14'>
-            <div className="py-10">
-                <p className= "flex text-3xl justify-start items-center font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Industries We Serve
-                </p>
+            {/* this is called psuedo effect */}
+            {/* now I am left with using stroke on the before text */}
+            <div className="py-10 px-5 relative after:absolute flex   items-center after:inset-0 after:z-0 after:content-['Industries_We_Serve'] after:-top-0 after:left-0 after:text-5xl after:italic after:h-full after:w-full  before:absolute  before:text-5xl  before:content-['Industries_We_Serve']   before:-top-5 before:left-8 before:h-full before:w-full before:z-0 before:blur-[2px] before:italic text-slate-500">
+                {/* <p className= "flex z-10 px-5 bg-red-500 text-4xl italic h-full w-full font-bold tracking-tight  sm:text-4xl">
+                        Industries We Serve
+                </p> */}
             </div>
 
-            <div className='w-5/6 mx-auto flex flex-wrap px-2 justify-center items-center'>
+            <div className=' mx-auto flex flex-wrap px-2 justify-center items-center'>
                 {Industries.map((ind:any, index:number)=>{
                         return (
-                            <Card key={index} className="mt-6 w-full sm:w-48 sm:h-48 h-60 relative flex mx-5  items-end transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
+                            <Card key={index} className="mt-6 w-full sm:w-60 sm:h-60 h-60 relative flex mx-5  items-end transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
                                 <span className="animate-ping absolute inline-flex w-2 h-2 rounded-full  bg-blue-500 opacity-75 "></span>
                                 <span className="relative inline-flex w-2 h-2 rounded-full   bg-blue-500"></span>
                                 <CardBody className="w-full justify-center items-center ">
