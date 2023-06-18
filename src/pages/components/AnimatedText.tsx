@@ -36,12 +36,13 @@ const [typetext, count] = useTypewriter({
     loop : true,
     delaySpeed : 2000,
     typeSpeed : 60,
+    
     // deleteSpeed : 100,
     
   })
     return ( 
-    <div className="w-full px-10  py-2 flex items-center  text-center overflow-hidden">
-       <motion.h1 className={`inline-block w-full text-dark font-bold capitalize text-7xl  ${className}`}
+    <div className="w-full px-4 py-2 flex items-center  text-center overflow-hidden">
+       <motion.h1 className={`mx-auto justify-center items-center inline-block w-full text-dark font-bold capitalize text-5xl  ${className}`}
        variants={quote}
        initial="initial"
        animate="animate"
@@ -57,7 +58,7 @@ const [typetext, count] = useTypewriter({
         )
      }
     <br/>
-     <div className=' text-red-500'>{typetext}</div>
+     <p className=' text-red-500'>{typetext}</p>
        </motion.h1>
        
     </div> );

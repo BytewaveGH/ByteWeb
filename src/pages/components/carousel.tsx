@@ -3,6 +3,7 @@
 import { Carousel } from "@material-tailwind/react";
 import Image from 'next/image';
 import laptops from '../../../public/laptops.jpg';
+import tryx from '../../../public/try.webp';
  
 export default function Carousel_Component() {
   return (
@@ -29,6 +30,7 @@ export default function Carousel_Component() {
         alt="image 2"
         className="h-full w-full object-cover"
       />
+      <Image src={tryx} alt={"Picture of team laptops "} className="justify-center items-center"   />
       <img
         src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
         alt="image 3"

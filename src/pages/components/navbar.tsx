@@ -1,6 +1,6 @@
 
 
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   Collapse,
@@ -14,6 +14,7 @@ import {
   MenuList,
   MenuItem,
   Chip,
+  Card,
 } from "@material-tailwind/react";
 import {
   ChevronDownIcon,
@@ -31,7 +32,26 @@ import {
   PuzzlePieceIcon,
   GiftIcon,
 } from "@heroicons/react/24/outline";
- 
+
+import js from '../../../public/js.png'
+import java from '../../../public/java.png'
+import react from '../../../public/react.png'
+import native from '../../../public/native.png'
+import php from '../../../public/php.png'
+import nodejs from '../../../public/nodejs.png'
+
+import go from '../../../public/go.png'
+
+import dotnet from '../../../public/dotnet.png'
+import flutter from '../../../public/flutter.png'
+import laravel from '../../../public/laravel.png'
+import kotlin from '../../../public/kotlin.png'
+import andriod from '../../../public/andriod.png'
+
+import Image from "next/image";
+
+
+
 const colors:any = {
   blue: "bg-blue-50 text-blue-500",
   orange: "bg-orange-50 text-orange-500",
@@ -41,6 +61,7 @@ const colors:any = {
   teal: "bg-teal-50 text-teal-500",
   cyan: "bg-cyan-50 text-cyan-500",
   pink: "bg-pink-50 text-pink-500",
+  yellow: "bg-red-50 text-yellow-500",
 };
  
 const navListMenuItems = [
@@ -53,7 +74,7 @@ const navListMenuItems = [
   {
     color: "orange",
     icon: ChatBubbleOvalLeftIcon,
-    title: "Press",
+    title: "Forum",
     description: "News and writings, press releases, and resources",
   },
   {
@@ -76,13 +97,13 @@ const navListMenuItems = [
   {
     color: "blue-gray",
     icon: FolderIcon,
-    title: "Legal",
+    title: "Case Studies",
     description: "All the stuff that we dan from legal made us add.",
   },
   {
     color: "purple",
     icon: RocketLaunchIcon,
-    title: "Products",
+    title: "Our Services",
     description: "Checkout our products that helps a startup running.",
   },
   {
@@ -104,6 +125,133 @@ const navListMenuItems = [
     description: "List of all our open-source projects, it's all free.",
   },
 ];
+
+
+const hireDev = [
+  {
+    color: "blue",
+    icon: php,
+    title: "App Developers",
+    description: "",
+  },
+  {
+    color: "orange",
+    icon: php,
+    title: "Web Developers",
+    description: "",
+  },
+  {
+    color: "green",
+    icon: php,
+    title: (
+      <div className="flex items-center gap-1">
+        Careers{" "}
+        <Chip
+          size="sm"
+          color="green"
+          variant="ghost"
+          value="We're hiring!"
+          className="capitalize"
+        />
+      </div>
+    ),
+    description: "",
+  },
+  {
+    color: "blue-gray",
+    icon: php,
+    title: "Software Developers",
+    description: "",
+  },
+  {
+    color: "purple",
+    icon: php,
+    title: "Full-stack Developers",
+    description: "",
+  },
+  {
+    color: "teal",
+    icon: php,
+    title: "Frontend Developers",
+    description: "",
+  },
+  {
+    color: "cyan",
+    icon: php,
+    title: "Backend Developers",
+    description: "",
+  },
+  {
+    color: "pink",
+    icon: go,
+    title: "UI/UX Developers",
+    description: "",
+  },
+  {
+    color: "pink",
+    icon: andriod,
+    title: "Andriod Developers",
+    description: "",
+  },
+  {
+    color: "yellow",
+    icon: flutter,
+    title: "Flutter Developers",
+    description: "",
+  },
+  {
+    color: "pink",
+    icon: native,
+    title: "React Native Developers",
+    description: "",
+  },
+  {
+    color: "pink",
+    icon: kotlin,
+    title: "Kotlin Developers",
+    description: "",
+  },
+  {
+    color: "pink",
+    icon: java,
+    title: "Java Developers",
+    description: "",
+  },
+  {
+    color: "pink",
+    icon: react,
+    title: "React Developers",
+    description: "",
+  },
+  {
+    color: "pink",
+    icon: nodejs,
+    title: "Node Developers",
+    description: "",
+  },
+  {
+    color: "pink",
+    icon: go,
+    title: "Go Developers",
+    description: "",
+  },
+  {
+    color: "pink",
+    icon: dotnet,
+    title: ".NET Developers",
+    description: "",
+  },
+  {
+    color: "pink",
+    icon: laravel,
+    title: "Laraval Developers",
+    description: "",
+  },
+];
+
+
+
+
  
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -170,7 +318,7 @@ function NavListMenu() {
           </Typography>
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-4 gap-y-2">{renderItems}</ul>
+          <ul className="grid grid-cols-4 gap-y-1">{renderItems}</ul>
         </MenuList>
       </Menu>
       <div className="block lg:hidden">
@@ -179,8 +327,97 @@ function NavListMenu() {
     </React.Fragment>
   );
 }
+
+
+// Hire a developer
  
+function NavListMenu2() {
+  const [isMenuOpen2, setIsMenuOpen2] = React.useState(false);
+  const [isMobileMenuOpen2, setIsMobileMenuOpen2] = React.useState(false);
+ 
+  const renderItems = hireDev.map(
+    ({ icon, title, description, color }, key) => (
+      <a href="#" key={key}>
+        <MenuItem className="flex items-center gap-3 rounded-lg">
+          <div className={`rounded-lg flex justify-items-center  ${colors[color]}`}>
+            {/* {React.createElement(icon, {
+              strokeWidth: 2,
+              className: "h-6 w-6",
+            })} */}
+            <Image src={icon} alt={"ji"}  className="w-1/2 h-1/2 flex justify-items-center" />
+          </div>
+          <div>
+            <Typography
+              variant="h6"
+              color="blue-gray"
+              className="flex items-center text-sm"
+            >
+              {title}
+            </Typography>
+            {/* <Typography variant="small" color="gray" className="font-normal">
+              {description}
+            </Typography> */}
+          </div>
+        </MenuItem>
+      </a>
+    )
+  );
+ 
+  return (
+    <React.Fragment>
+      <Menu
+        open={isMenuOpen2}
+        handler={setIsMenuOpen2}
+        offset={{ mainAxis: 20 }}
+        placement="bottom"
+        allowHover={true}
+      >
+        <MenuHandler>
+          <Typography as="div" variant="small" className="font-normal">
+            <ListItem
+              className="flex items-center gap-2 py-2 pr-4"
+              selected={isMenuOpen2 || isMobileMenuOpen2}
+              onClick={() => setIsMobileMenuOpen2((cur) => !cur)}
+            >
+              <Square3Stack3DIcon className="h-[18px] w-[18px]" />
+                Hire a developer
+              <ChevronDownIcon
+                strokeWidth={2.5}
+                className={`hidden h-3 w-3 transition-transform lg:block ${
+                  isMenuOpen2 ? "rotate-180" : ""
+                }`}
+              />
+              <ChevronDownIcon
+                strokeWidth={2.5}
+                className={`block h-3 w-3 transition-transform lg:hidden ${
+                  isMobileMenuOpen2 ? "rotate-180" : ""
+                }`}
+              />
+            </ListItem>
+          </Typography>
+        </MenuHandler>
+        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
+          <ul className="grid grid-cols-4 gap-y-1">{renderItems}</ul>
+        </MenuList>
+      </Menu>
+      <div className="block lg:hidden">
+        <Collapse open={isMobileMenuOpen2}>{renderItems}</Collapse>
+      </div>
+    </React.Fragment>
+  );
+}
+
+// End of Hire a developer 
+
+
 function NavList() {
+  const [openHireMenu, setOpenHireMenu] = useState<boolean>(false);
+ 
+  const triggers = {
+    onMouseEnter: () => setOpenHireMenu(true),
+    onMouseLeave: () => setOpenHireMenu(false),
+  };
+
   return (
     <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
       <Typography
@@ -192,10 +429,15 @@ function NavList() {
       >
         <ListItem className="flex items-center gap-2 py-2 pr-4">
           <CubeTransparentIcon className="h-[18px] w-[18px]" />
-          Blocks
+          Why Bytwave
         </ListItem>
       </Typography>
+
       <NavListMenu />
+
+      <NavListMenu2 />
+
+
       <Typography
         as="a"
         href="#"
@@ -231,7 +473,7 @@ export default function Nav() {
           variant="h6"
           className="mr-4 cursor-pointer py-1.5 lg:ml-2"
         >
-          Bytewave GH
+          Bytewave
         </Typography>
         <div className="hidden lg:block">
           <NavList />
