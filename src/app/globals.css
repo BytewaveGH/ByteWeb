@@ -26,3 +26,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+
+#stroke-text::before {
+    color : "#000";
+    -webkit-text-fill-color : transparent;
+    -webkit-text-stroke-width: 2px;
+    
+    /* background-color: blueviolet; */
+    
+  }

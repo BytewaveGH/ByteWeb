@@ -33,7 +33,7 @@ const PEI = [org,bloc,tec]
 
 const cards = [
   {id:0, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
-  {id:1, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
+  {id:1, label: "UI/UX", icon:"hi", description:"Because it's about motivating "},
   {id:2, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
   {id:3, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
   {id:4, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
@@ -105,7 +105,7 @@ const cards = [
 
       {/* What you will get  */}
       
-        <CarouselWC useCards cardsArr={cards} />
+        <CarouselWC useCards={true} cardsArr={cards} />
      
 
 

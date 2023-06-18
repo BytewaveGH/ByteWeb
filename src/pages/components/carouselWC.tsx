@@ -28,7 +28,7 @@ const images = [
 const carouselWC= ({useCards, useImages, cardsArr, imagesArr}:{useCards?: boolean, useImages?:boolean, cardsArr?:any, imagesArr?:any}) => (
   
 
-    <Carousel  autoplay>
+    <Carousel  autoplay className=' w-full flex '>
     { 
       useImages ? 
         images.map(({id,label,img})=>{
@@ -38,16 +38,17 @@ const carouselWC= ({useCards, useImages, cardsArr, imagesArr}:{useCards?: boolea
               
               <Image src={img} alt=""  />
             </div>
-            
+          
           )
         })
       :
       useCards ?
         cardsArr?.map((card:any)=>{
           return (
-            
-            <div  className="flex ">
-              <Card className="mt-6 w-96 h-[400px]">
+            <Carousel  autoplay className=' w-full flex '>
+            <div className='w-full h-full bg-blue-500 flex space-x-5 '>
+              
+              <Card className="mt-6 w-[200px] h-[400px] bg-red-400">
                 <CardBody>
                   {/* <RocketLaunchIcon className="text-blue-500 w-12 h-12 mb-4" /> */}
                   <Typography color="blue-gray" className="mb-2">
@@ -66,8 +67,10 @@ const carouselWC= ({useCards, useImages, cardsArr, imagesArr}:{useCards?: boolea
                   </a>
                 </CardFooter>
               </Card>
-            </div>
             
+            </div>
+               </Carousel>
+           
           )
         })
        
@@ -77,8 +80,8 @@ const carouselWC= ({useCards, useImages, cardsArr, imagesArr}:{useCards?: boolea
         </>
       
     }
-    
-  </Carousel>
+     </Carousel>
+
 
   
 );
