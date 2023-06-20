@@ -17,10 +17,10 @@ export default function() {
   </div>
 
   {/* <!-- Grid --> */}
-  <div className="mt-5 lg:mt-16 grid lg:grid-cols-3 gap-8 lg:gap-12">
+  <div className="mt-4 lg:mt-12 grid lg:grid-cols-3 gap-8 lg:gap-12">
     <div className="lg:col-span-1">
-      <h2 className="font-bold text-2xl md:text-3xl text-gray-800 dark:text-gray-200">
-        We tackle the challenges start-ups face
+      <h2 className="font-bold text-2xl md:text-2xl text-gray-800 dark:text-gray-200">
+        We tackle the challenges start-ups, small/medium businesses, agencies and Enterprises face
       </h2>
       <p className="mt-2 md:mt-4 text-gray-500">
         Besides working with start-up enterprises as a partner for digitalization, we have built enterprise products for common pain points that we have encountered in various products and projects.
@@ -57,7 +57,7 @@ export default function() {
               Simple and affordable
             </h3>
             <p className="mt-1 text-gray-600 dark:text-gray-400">
-              From boarding passes to movie tickets, there's pretty much nothing you can't store with Preline.
+              From single page applications to ERP systems, there's really no dream that can't to achieved with Bytewave.
             </p>
           </div>
         </div>
@@ -87,7 +87,7 @@ export default function() {
           </svg>
           <div className="grow">
             <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
-              Designing for people
+              Designing for clients and businesses
             </h3>
             <p className="mt-1 text-gray-600 dark:text-gray-400">
               We actively pursue the right balance between functionality and aesthetics, creating delightful experiences.

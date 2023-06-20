@@ -4,6 +4,7 @@ import React from 'react'
 import org from '../../../public/15329397_1904.i402.011_Web development isometric concept infographics.jpg'
 import bloc from '../../../public/blog-blogging-digital-networking-www-global-concept.jpg'
 import tec from '../../../public/22635334_6664805.jpg'
+import CarouselWC from '@/pages/components/carouselWC'
 
 type Props = {}
 
@@ -29,6 +30,14 @@ export default function WhyBytewave({}: Props) {
 ]
 
 const PEI = [org,bloc,tec]
+
+const cards = [
+  {id:0, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
+  {id:1, label: "UI/UX", icon:"hi", description:"Because it's about motivating "},
+  {id:2, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
+  {id:3, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
+  {id:4, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
+]
 
   return (
     <div className='w-full h-full bg-white py-3 '>
@@ -93,6 +102,17 @@ const PEI = [org,bloc,tec]
           FAQHeadings='Herh chama' 
         />
       </div>
+
+      {/* What you will get  */}
+      
+        <CarouselWC useCards={true} cardsArr={cards} />
+     
+
+
+      {/* Our Products sample */}
+
+
+      {/* Testimonials  */}
     
     </div>
   )

@@ -174,10 +174,11 @@ export default function Home() {
       <div>
         <Diffs 
           callouts={callouts} 
-          title={"The ByteWave Difference"}
+          titlex={"The_ByteWave_Difference"}
           isclass={true} 
           classname="flex text-3xl  justify-center items-center font-bold tracking-tight text-gray-900 sm:text-4xl"
-          textClassname="group-hover:my-rotate-y-180 " 
+          descriptionClassname="group-hover:my-rotate-y-180 "
+          textClassname="py-5 relative after:absolute flex after:flex after:justify-center  before:flex before:justify-center  items-center after:italic after:inset-0 after:z-0 after:content-['The_ByteWave_Difference'] after:text-black after:-top-0 after:left-0 after:text-5xl  after:h-full after:w-full after:font-sans  before:absolute  before:text-5xl  before:content-['Our_Uniqueness'] text-blue-gray-100  before:-top-4 before:left-8 before:h-full before:w-full before:z-0  before:tracking-widest before:italic  before:font-sans before:uppercase" 
         />
       </div>
       {/* cta */}
@@ -199,11 +200,12 @@ export default function Home() {
       <div>
         <Diffs 
           callouts={services} 
-          title={"Our Services"} 
+          titlex={"Our_Services"} 
           isclass={true} 
           classname=" py-5 flex text-3xl justify-start items-start font-bold tracking-tight text-gray-900 sm:text-4xl"
           imageClassname="h-full w-full"
-          textClassname="group-hover:my-rotate-y-180 "
+          descriptionClassname="group-hover:my-rotate-y-180 "
+          textClassname="my-10 py-2 relative after:absolute flex after:flex after:justify-center  before:flex before:justify-center  items-center after:italic after:inset-0 after:z-0 after:content-['Our_Services'] after:text-black after:-top-0 after:left-0 after:text-5xl  after:h-full after:w-full after:font-sans  before:absolute  before:text-5xl  before:content-['Services'] text-blue-gray-100  before:-top-4 before:left-8 before:h-full before:w-full before:z-0  before:tracking-widest before:italic  before:font-sans before:uppercase" 
           />
       </div>
 

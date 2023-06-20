@@ -35,6 +35,8 @@ export default function FAQ({headings}:{headings?: string}) {
         <div className="text-4xl text-black py-5 justify-items-center">
             {headings}
         </div>
+
+        {/* will work on looping to one and avoid duplicates */}
       <Accordion open={open === 1} icon={<Icon id={1} open={open} />}>
         <AccordionHeader onClick={() => handleOpen(1)}>
           What is Material Tailwind?

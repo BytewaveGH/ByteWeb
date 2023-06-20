@@ -18,13 +18,15 @@ import tryx from '../../../public/ai.png'
 */
 
 
-export default function Diffs({callouts, title,pdetails, ispdetails=false, classname,imageClassname,textClassname, isclass=false}:{callouts:any, title:string,ispdetails?:boolean,pdetails?:string,classname?:string,imageClassname?:string,textClassname?:string, isclass?:boolean}) {
+export default function Diffs({callouts, titlex,pdetails, ispdetails=false, classname,imageClassname,textClassname,descriptionClassname, isclass=false}:{callouts:any, titlex:string,ispdetails?:boolean,pdetails?:string,classname?:string,imageClassname?:string,textClassname?:string,descriptionClassname?:string, isclass?:boolean}) {
   return (
-    <div className="bg-gray-100 text-black">
+    <div className="bg-gray-100 text-blue-gray-400">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <p className={isclass ? classname : "flex text-3xl  justify-center items-center font-bold tracking-tight text-gray-900 sm:text-4xl "}>
+        {/* <p className={isclass ? classname : "flex text-3xl  justify-center items-center font-bold tracking-tight text-gray-900 sm:text-4xl "}>
                 {title}
-        </p>
+        </p> */}
+        <div id='stroke-text'  className={textClassname ? textClassname : "flex text-3xl  justify-center items-center font-bold tracking-tight text-gray-900 sm:text-4xl " }>
+        </div>
         {}
         <div className="mx-auto max-w-2xl py-20 sm:py-20  lg:max-w-none lg:py-16">
           <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
@@ -56,7 +58,7 @@ export default function Diffs({callouts, title,pdetails, ispdetails=false, class
                       {callout.name}
                     </a>
                   </h3>
-                  <p className={`${isclass ? textClassname : " text-base font-semibold text-gray-900"}`}>{callout.description}</p>
+                  <p className={`${isclass ? descriptionClassname : " text-base font-semibold text-gray-900"}`}>{callout.description}</p>
                 </div>
               </div>
             ))}

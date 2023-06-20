@@ -18,9 +18,15 @@ const Myclass = plugin(function({ addUtilities }){
     ".backface-hidden":{
       backfaceVisibility:"hidden",
       
-    }
+    },
+
+    
+    
+    
   })
 })
+
+
 
 const {fontFamily} = require('tailwindcss/defaultTheme')
 
@@ -56,6 +62,9 @@ module.exports = withMT({
     },
   },
   plugins: [
+    
+    require('tailwindcss'),
+    require('autoprefixer'),
     Myclass,
     //  require('@tailwindcss/aspect-ratio'),
     // require('preline/plugin'),

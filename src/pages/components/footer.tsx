@@ -11,11 +11,11 @@ const LINKS = [
   },
   {
     title: "Company",
-    items: ["About us", "Careers", "Press", "News"],
+    items: ["About us", "Careers", "Our Services", "Contact Us", ],
   },
   {
     title: "Resource",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
+    items: ["Forum", "Events", "Open Source", "Help center"],
   },
 ];
  
@@ -28,9 +28,9 @@ export default function NavFooter() {
       <div  className=" w-full max-w-7xl mt-2 ">
       
         <div className="grid grid-cols-1  md:grid-cols-2">
-          <Typography variant="h1" className="mb-6 w italic">
-            ByteWave 
-          </Typography>
+          <div  id="stroke-text" className="my-10 py-2 relative after:absolute flex after:flex after:justify-center  before:flex before:justify-center  items-center after:italic after:inset-0 after:z-0 after:content-['ByteWave'] after:text-black after:-top-0 after:left-0 after:text-5xl  after:h-full after:w-full after:font-sans  before:absolute  before:text-5xl  before:content-['ByteWave'] text-blue-gray-100  before:-top-4 before:left-8 before:h-full before:w-full before:z-0  before:tracking-widest before:italic  before:font-sans before:uppercase">
+            
+          </div>
           <div className="grid grid-cols-3 justify-between gap-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>
