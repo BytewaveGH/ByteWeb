@@ -1,3 +1,5 @@
+"use client"
+
 import PageSecExtended from '@/pages/components/pageSecExtend'
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/24/outline'
 import React from 'react'
@@ -5,6 +7,7 @@ import org from '../../../public/15329397_1904.i402.011_Web development isometri
 import bloc from '../../../public/blog-blogging-digital-networking-www-global-concept.jpg'
 import tec from '../../../public/22635334_6664805.jpg'
 import CarouselWC from '@/pages/components/carouselWC'
+import Carousel_Component from '@/pages/components/carousel'
 
 type Props = {}
 
@@ -105,7 +108,9 @@ const cards = [
 
       {/* What you will get  */}
       
-        <CarouselWC useCards={true} cardsArr={cards} />
+        <div>
+       
+        </div>
      
 
 
