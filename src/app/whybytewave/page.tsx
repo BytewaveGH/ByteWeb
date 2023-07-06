@@ -8,10 +8,32 @@ import bloc from '../../../public/blog-blogging-digital-networking-www-global-co
 import tec from '../../../public/22635334_6664805.jpg'
 import CarouselWC from '@/pages/components/carouselWC'
 import Carousel_Component from '@/pages/components/carousel'
+import CompaniesWeServe from '@/pages/components/companiesWeserve'
+import destination from '../../../public/destination.png'
+import dish from '../../../public/dish.png'
+import graduation from '../../../public/academic.png'
+import ecormence from '../../../public/ecommerce.png'
+import house from '../../../public/house.png'
+import supply from '../../../public/supply.png'
+import health from '../../../public/health.png'
+import deployment from '../../../public/deployment.png'
 
 type Props = {}
 
 export default function WhyBytewave({}: Props) {
+
+
+  const Industries = [
+    {id: 0, image: deployment, label:'Top Talents',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
+    {id: 1, image: ecormence, label:'Direct Access to Experts',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
+    {id: 2, image: graduation, label:'Project Specs and Scoping',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
+    {id: 3, image: health, label:'Code Documentation and Transition',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
+    {id: 4, image: dish, label:'Managed Process',desc: ''},
+    {id: 5, image: destination, label:'Reporting',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
+    {id: 6, image: house, label:'Consulting services',desc: ''},
+    {id: 7, image: supply, label:'Delivery management',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
+  ]
+  
 
   const features = [
   {
@@ -108,7 +130,14 @@ const cards = [
 
       {/* What you will get  */}
       
-        <div>
+        <div className='mx-0'>
+         <CompaniesWeServe 
+          services={Industries}
+          desc={true}
+          style='mx-auto max-w-[112rem] px-2 py-10 sm:px-6 lg:px-8 lg:py-14  justify-center'
+          customTitle={`py-10  relative after:absolute flex justify-center sm:m-3   items-center  after:inset-0 after:z-0 after:content-['Experience_our_exceptional_offerings'] after:text-black after:-top-0 after:left-0 after:text-5xl  after:h-full after:w-full after:font-sans  before:absolute  before:text-5xl  before:content-['Services_we_offer'] text-blue-gray-100  before:-top-4 before:left-8 before:h-full before:w-full before:z-0  before:tracking-widest before:italic  before:font-sans before:uppercase`} 
+          cardDesign={'mt-6 w-full sm:w-64 sm:h-80 h-80 md:w-[25rem] md:h-[22rem] relative flex mx-5  items-end transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 '}
+        />
        
         </div>
      

@@ -25,6 +25,14 @@ import webdev from '../../public/web-dev.webp'
 import org from '../../public/15329397_1904.i402.011_Web development isometric concept infographics.jpg'
 import bloc from '../../public/blog-blogging-digital-networking-www-global-concept.jpg'
 import tec from '../../public/22635334_6664805.jpg'
+import destination from '../../public/destination.png'
+import dish from '../../public/dish.png'
+import graduation from '../../public/academic.png'
+import ecormence from '../../public/ecommerce.png'
+import house from '../../public/house.png'
+import supply from '../../public/supply.png'
+import health from '../../public/health.png'
+import deployment from '../../public/deployment.png'
 
 export default function Home() {
 
@@ -127,6 +135,19 @@ export default function Home() {
     description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
     icon: ServerIcon,
   },
+]
+
+
+// Companies we serve 
+const Industries = [
+  {id: 0, image: deployment, label:'On-Demand Solutions'},
+  {id: 1, image: ecormence, label:'Retail, Ecommerce'},
+  {id: 2, image: graduation, label:'Education & e-learning'},
+  {id: 3, image: health, label:'HealthCare & Fitness'},
+  {id: 4, image: dish, label:'Food & Restaurants'},
+  {id: 5, image: destination, label:'Travel & Hospitality'},
+  {id: 6, image: house, label:'Real Estate'},
+  {id: 7, image: supply, label:'Logistics & Distribution'},
 ]
 
 
@@ -233,7 +254,7 @@ export default function Home() {
 
       {/* Companies we serve */}
       <div>
-        <CompaniesWeServe />
+        <CompaniesWeServe services={Industries} />
       </div>
 
       {/* <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
