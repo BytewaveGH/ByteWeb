@@ -49,3 +49,13 @@ export default function InputTemplate({ label, labelCol, inputError, inputType, 
         </div >
     )
 }
+
+
+
+
+
+
+
+
+
+

@@ -14,12 +14,15 @@ interface props {
     maxLength: number;
     requiredPrompt: string;
     height: string | number;
+    labelCol?: number
+    wrapperCol?: number
     textareaStyle?: any
     setInputValue: (value: any) => void
 
+
 }
 
-export const TextArea_template = ({ label, textareaStyle, inputType, placeholder, setInputValue, isAllowClear, isRequired, isShowCount, maxLength, requiredPrompt, height }: props) => {
+export const TextArea_template = ({ label, textareaStyle, inputType, placeholder, setInputValue, isAllowClear, isRequired, isShowCount, maxLength, requiredPrompt, height, labelCol, wrapperCol }: props) => {
     const [data, setData] = useState<string>()
     return (
 
@@ -28,6 +31,8 @@ export const TextArea_template = ({ label, textareaStyle, inputType, placeholder
                 label={<p className=''>${label}</p>}
                 name="username"
                 rules={[{ required: isRequired, message: `${requiredPrompt}` }]}
+                labelCol={labelCol ? { span: labelCol } : { span: 3 }}
+                wrapperCol={wrapperCol ? { span: wrapperCol } : { span: 9 }}
             >
                 <TextArea
                     style={...textareaStyle}

@@ -37,150 +37,130 @@ export default function Contact_Us() {
                     <Timeline_Component />
                 </div>
 
-                <div className='w-3/5  p-10 shadow-2xl border-[1px] rounded mb-2'>
+                <div className='w-3/5 mx-5 p-10 shadow-2xl border-[1px] rounded my-2'>
                     <Form
-                        layout='inline'
-                        name="basic"
-                        labelCol={{ span: 11 }}
-                        wrapperCol={{ span: 24 }}
-                        initialValues={{ remember: true }}
-                        className='w-full mb-1 '
-                        autoComplete="off"
-                    >
-                        <>
-                            {inputs1.map(({ id, label, stateName, defaultValue }) => {
-                                return (
-                                    <div className='flex pr-[100px]'>
-                                        <InputTemplate
-                                            label={label}
-                                            placeholder={defaultValue}
-                                            isAllowClear={false}
-                                            isRequired={false}
-
-                                            setInputValue={(e: any) => { console.log(e) }}
-                                        />
-                                    </div>
-                                )
-                            })}
-
-                        </>
-                    </Form>
-
-                    <Form
-                        layout='inline'
-                        name="basic"
                         labelCol={{ span: 10 }}
-                        wrapperCol={{ span: 22 }}
-                        initialValues={{ remember: true }}
-                        className='w-full mb-1 '
-                        autoComplete="off"
-
+                        // wrapperCol={{ span: 16 }}
+                        className='w-full '
                     >
-                        <>
-                            {inputs2.map(({ id, label, stateName, defaultValue, style }) => {
-                                return (
+                        {/* horizontal layout */}
+                        <div className='w-full flex'>
+                            <div className='w-1/2'>
+                                {inputs1.map(({ id, label, stateName, defaultValue, style }) => {
+                                    return (
+                                        <>
+                                            <InputTemplate
+                                                label={label}
+                                                isAllowClear={false}
+                                                isRequired={false}
+                                                setInputValue={function (value: any): void {
+                                                    throw new Error('Function not implemented.')
+                                                }}
 
-                                    <div className='pr-[75px]'>
-                                        <InputTemplate
+                                            />
+                                        </>
+                                    )
+                                })}
+
+                            </div>
+
+                            <div className='w-1/2'>
+                                {inputs2.map(({ id, label, stateName, defaultValue, style }) => {
+                                    return (
+                                        <>
+                                            <InputTemplate
+                                                label={label}
+                                                isAllowClear={false}
+                                                isRequired={false}
+                                                setInputValue={function (value: any): void {
+                                                    throw new Error('Function not implemented.')
+                                                }}
+
+                                            />
+                                        </>
+                                    )
+                                })}
+
+                            </div>
+
+                        </div>
+
+                        {/* Select category */}
+
+                        <div className='w-full '>
+                            {selects1.map(({ id, label, optionsData, idExpr, dataExpr, defaultValue, stateName, style }) => {
+                                return (
+                                    <>
+                                        <SelectTemplate
                                             label={label}
-                                            inputType={label === "Website" ? 'url' : 'text'}
-                                            inputError={label === "Website" ? "Invalid link eg. http://bytwave.com" : ""}
+                                            labelCol={5}
+                                            wrapperCol={12}
+                                            options={optionsData}
+                                            idexpr={idExpr}
+                                            dataexp={dataExpr}
+                                            useCallFunc
+                                            isRequired={true}
+                                            selectedValue={() => { }}
+                                            requiredPrompt={''}
+                                        />
+                                    </>
+                                )
+                            })}
+                        </div>
+                        {/* textarea */}
+                        <div className='w-full '>
+                            {textArea1.map(({ id, label, defaultValue, stateName, style }) => {
+                                return (
+                                    <>
+                                        <TextArea_template
+                                            label={label}
+                                            inputType={'text'}
+                                            labelCol={5}
+                                            wrapperCol={24}
                                             placeholder={defaultValue}
                                             isAllowClear={false}
                                             isRequired={false}
-                                            // inputStyles={{ width: '400px' }}
-                                            setInputValue={(e: any) => { console.log(e) }}
-                                        />
-                                    </div>
-
+                                            isShowCount={true}
+                                            maxLength={100}
+                                            requiredPrompt={''}
+                                            textareaStyle={{ height: '100px' }}
+                                            setInputValue={function (value: any): void {
+                                                throw new Error('Function not implemented.')
+                                            }}
+                                            height={100} />
+                                    </>
                                 )
                             })}
+                        </div>
 
-                        </>
-                    </Form>
+                        {/* budget */}
 
-                    {/*  */}
+                        <div className='w-full '>
+                            {selects2.map(({ id, label, optionsData, idExpr, dataExpr, defaultValue, stateName, style }) => {
+                                return (
+                                    <>
+                                        <SelectTemplate
+                                            label={label}
+                                            labelCol={5}
+                                            wrapperCol={12}
+                                            options={optionsData}
+                                            idexpr={idExpr}
+                                            dataexp={dataExpr}
+                                            useCallFunc
+                                            isRequired={true}
+                                            selectedValue={() => { }}
+                                            requiredPrompt={''}
+                                        />
+                                    </>
+                                )
+                            })}
+                        </div>
 
-                    <div className='my-5'>
-                        {selects1.map(({ id, label, idExpr, dataExpr, optionsData, stateName, defaultValue, style }) => {
-                            return (
-                                <div>
-                                    <SelectTemplate
-                                        label={label}
-                                        labelCol={4}
-
-                                        requiredPrompt={label}
-                                        options={optionsData}
-                                        idexpr={idExpr}
-                                        dataexp={dataExpr}
-                                        selectedValue={(e) => { console.log(e) }}
-                                        isRequired={true}
-                                        useCallFunc
-                                        placeHolder={defaultValue}
-                                    />
-                                </div>
-                            )
-                        })}
-                    </div>
-
-                    {/*  */}
-
-                    <>
-                        {textArea1.map(({ id, label, defaultValue, stateName, style }) => {
-                            return (
-                                <>
-                                    <TextArea_template
-                                        label={label}
-                                        inputType={'text'}
-                                        placeholder={''}
-                                        textareaStyle={{ height: '100px' }}
-                                        isAllowClear={false}
-                                        isRequired={false}
-                                        isShowCount={true}
-                                        maxLength={100}
-                                        requiredPrompt={''}
-                                        height={400}
-                                        setInputValue={function (value: any): void {
-                                            throw new Error('Function not implemented.')
-                                        }} />
-                                </>
-                            )
-                        })}
-                    </>
-
-                    {/*  */}
-
-
-                    <div className='my-5'>
-                        {selects2.map(({ id, label, idExpr, dataExpr, optionsData, stateName, defaultValue, style }) => {
-                            return (
-                                <div>
-                                    <SelectTemplate
-                                        label={label}
-                                        labelCol={4}
-                                        requiredPrompt={label}
-                                        options={optionsData}
-                                        idexpr={idExpr}
-                                        dataexp={dataExpr}
-                                        selectedValue={(e) => { console.log(e) }}
-                                        isRequired={true}
-                                        useCallFunc
-                                        placeHolder={defaultValue}
-                                    />
-                                </div>
-                            )
-                        })}
-                    </div>
-
-                    {/*  */}
-
-                    <Form
-                        layout='horizontal'
-                    >
+                        {/* calender */}
                         <Form.Item
 
                             label={<p className=''>{"Schedule a meeting"}</p>}
-                            labelCol={{ span: 4 }}
+                            labelCol={{ span: 5 }}
                             className='flex'
                         >
                             <div className='flex border-[1px]' >
@@ -190,15 +170,15 @@ export default function Contact_Us() {
                                 />
                             </div>
                         </Form.Item>
+
+
+                        <div className='w-full flex justify-end'>
+                            <Button className='w-[20%] bg-blue-gray-300' type="primary" size={"large"}>
+                                Submit
+                            </Button>
+                        </div>
+
                     </Form>
-
-                    {/*  */}
-
-                    <div className='w-full flex justify-end'>
-                        <Button className='w-[20%] bg-blue-gray-300' type="primary" size={"large"}>
-                            Submit
-                        </Button>
-                    </div>
 
 
                 </div>
