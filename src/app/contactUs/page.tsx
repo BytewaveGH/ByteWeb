@@ -31,7 +31,7 @@ export default function Contact_Us() {
     ]
     return (
         <div className='w-full h-full '>
-            <p className='w-full p-2 text-3xl font-bold text-black flex justify-center items-center'>
+            <p className='w-full  p-2 text-3xl font-bold text-black flex justify-center items-center'>
                 Supercharge Your Project with Cutting-Edge Tech Solutions
             </p>
             <p className='w-full  p-1 text-xl text-black flex justify-center items-center'>
@@ -49,7 +49,7 @@ export default function Contact_Us() {
                         className='w-full '
                     >
                         {/* horizontal layout */}
-                        <div className='w-full flex'>
+                        <div className='w-full flex '>
                             <div className='w-1/2'>
                                 {inputs1.map(({ id, label, stateName, defaultValue, style }) => {
                                     return (
@@ -99,7 +99,7 @@ export default function Contact_Us() {
                                         <SelectTemplate
                                             label={label}
                                             labelCol={5}
-                                            wrapperCol={12}
+                                            wrapperCol={7}
                                             options={optionsData}
                                             idexpr={idExpr}
                                             dataexp={dataExpr}
@@ -147,7 +147,7 @@ export default function Contact_Us() {
                                         <SelectTemplate
                                             label={label}
                                             labelCol={5}
-                                            wrapperCol={12}
+                                            wrapperCol={7}
                                             options={optionsData}
                                             idexpr={idExpr}
                                             dataexp={dataExpr}

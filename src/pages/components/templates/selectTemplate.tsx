@@ -38,6 +38,7 @@ export const SelectTemplate = ({ label, index, options, idexpr, dataexp, style, 
                 rules={[{ required: isRequired }]}
                 labelCol={labelCol ? { span: labelCol } : { span: 3 }}
                 wrapperCol={wrapperCol ? { span: wrapperCol } : { span: 9 }}
+                className='mb-2'
             >
 
                 <div>

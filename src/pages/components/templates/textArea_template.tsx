@@ -33,6 +33,7 @@ export const TextArea_template = ({ label, textareaStyle, inputType, placeholder
                 rules={[{ required: isRequired, message: `${requiredPrompt}` }]}
                 labelCol={labelCol ? { span: labelCol } : { span: 3 }}
                 wrapperCol={wrapperCol ? { span: wrapperCol } : { span: 9 }}
+                className='mb-2'
             >
                 <TextArea
                     style={...textareaStyle}

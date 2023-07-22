@@ -29,7 +29,7 @@ export default function InputTemplate({ label, labelCol, inputError, inputType, 
                 label={<p className=''>${label}</p>}
                 name="username"
                 rules={[{ required: isRequired, type: `${inputType}`, message: `${inputError}` }]}
-                className='w-full '
+                className='w-full mb-2'
 
             >
                 <Input

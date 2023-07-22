@@ -18,21 +18,20 @@ import supply from '../../../public/supply.png'
 import health from '../../../public/health.png'
 import deployment from '../../../public/deployment.png'
 import Testimonials from '@/pages/components/Testimonials'
+import Members from '@/pages/components/members'
 
 type Props = {}
 
-export default function WhyBytewave({}: Props) {
+export default function WhyBytewave({ }: Props) {
 
 
   const Industries = [
-    {id: 0, image: deployment, label:'Top Talents',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
-    {id: 1, image: ecormence, label:'Direct Access to Experts',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
-    {id: 2, image: graduation, label:'Project Specs and Scoping',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
-    {id: 3, image: health, label:'Code Documentation and Transition',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
-    {id: 4, image: dish, label:'Managed Process',desc: ''},
-    {id: 5, image: destination, label:'Reporting',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
-    {id: 6, image: house, label:'Consulting services',desc: ''},
-    {id: 7, image: supply, label:'Delivery management',desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.'},
+    { id: 0, image: deployment, label: 'Top Talents', desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.' },
+    { id: 1, image: ecormence, label: 'Direct Access to Experts', desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.' },
+    { id: 2, image: graduation, label: 'Project Specs and Scoping', desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.' },
+    { id: 3, image: health, label: 'Code Documentation and Reporting', desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.' },
+    { id: 4, image: dish, label: 'Managed Process', desc: '' },
+    { id: 5, image: destination, label: ' Consulting services', desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.' },
   ]
 
   const testimonials = [
@@ -43,7 +42,7 @@ export default function WhyBytewave({}: Props) {
       contributor: "Josephine F Kwakye",
       occupation: "Software Developer"
     },
-  
+
     {
       id: 2,
       imgLink: "https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -51,7 +50,7 @@ export default function WhyBytewave({}: Props) {
       contributor: "Michael Reynolds",
       occupation: "Entrepreneur"
     },
-  
+
     {
       id: 3,
       imgLink: "https://images.pexels.com/photos/5615665/pexels-photo-5615665.jpeg?auto=compress&cs=tinysrgb&w=420&h=400&dpr=1",
@@ -60,36 +59,77 @@ export default function WhyBytewave({}: Props) {
       occupation: "Business Woman"
     }
   ]
-  
+
 
   const features = [
-  {
-    name: 'Push to deploy.',
-    description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-    icon: CloudArrowUpIcon,
-  },
-  {
-    name: 'SSL certificates.',
-    description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-    icon: LockClosedIcon,
-  },
-  {
-    name: 'Database backups.',
-    description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-    icon: ServerIcon,
-  },
-]
+    {
+      name: 'Push to deploy.',
+      description:
+        'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      icon: CloudArrowUpIcon,
+    },
+    {
+      name: 'SSL certificates.',
+      description: 'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
+      icon: LockClosedIcon,
+    },
+    {
+      name: 'Database backups.',
+      description: 'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
+      icon: ServerIcon,
+    },
+  ]
 
-const PEI = [org,bloc,tec]
+  const PEI = [org, bloc, tec]
 
-const cards = [
-  {id:0, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
-  {id:1, label: "UI/UX", icon:"hi", description:"Because it's about motivating "},
-  {id:2, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
-  {id:3, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
-  {id:4, label: "UI/UX", icon:"hi", description:"Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others."},
-]
+  const cards = [
+    { id: 0, label: "UI/UX", icon: "hi", description: "Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others." },
+    { id: 1, label: "UI/UX", icon: "hi", description: "Because it's about motivating " },
+    { id: 2, label: "UI/UX", icon: "hi", description: "Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others." },
+    { id: 3, label: "UI/UX", icon: "hi", description: "Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others." },
+    { id: 4, label: "UI/UX", icon: "hi", description: "Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others." },
+  ]
+
+  const people = [
+    {
+      name: 'Leslie Alexander',
+      role: 'Co-Founder / CEO',
+      imageUrl:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    {
+      name: 'Leslie Alexander',
+      role: 'Co-Founder / CEO',
+      imageUrl:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    {
+      name: 'Leslie Alexander',
+      role: 'Co-Founder / CEO',
+      imageUrl:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    {
+      name: 'Leslie Alexander',
+      role: 'Co-Founder / CEO',
+      imageUrl:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    {
+      name: 'Leslie Alexander',
+      role: 'Co-Founder / CEO',
+      imageUrl:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+    {
+      name: 'Leslie Alexander',
+      role: 'Co-Founder / CEO',
+      imageUrl:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    },
+
+    // More people...
+  ]
 
   return (
     <div className='w-full h-full bg-white py-3 '>
@@ -97,27 +137,18 @@ const cards = [
         <div className="relative max-w-5xl mx-auto pt-10 sm:pt-10 lg:pt-10 justify-center items-center text-center">
           <h2 className="text-base font-semibold leading-7 text-indigo-600 italic">Bytewave</h2>
           <h1 className="text-slate-900 font-bold text-4xl sm:text-5xl lg:text-5xl tracking-tight text-center dark:text-white text-black uppercase" >
-              Building a perfect solution according to your business goals
+            Building a perfect solution according to your business goals
           </h1>
           <p className="mt-6 text-lg text-slate-600 text-center text-gray-600 max-w-5xl mx-auto dark:text-slate-400">
-              Driven by experienced teams and an agile framework, we prioritize our 
-              clients' commercial goals to deliver exceptional business value.  
-              Driven by experienced teams and an agile framework, we prioritize our 
-              clients' commercial goals to deliver exceptional business value.  
-              Driven by experienced teams and an agile framework, we prioritize our 
-              clients' commercial goals to deliver exceptional business value.  
-              Driven by experienced teams and an agile framework, we prioritize our 
-              clients' commercial goals to deliver exceptional business value.  
-              Driven by experienced teams and an agile framework, we prioritize our 
-              clients' commercial goals to deliver exceptional business value.  
-              Driven by experienced teams and an agile framework, we prioritize our 
-              clients' commercial goals to deliver exceptional business value.  
-              Driven by experienced teams and an agile framework, we prioritize our 
-              clients' commercial goals to deliver exceptional business value.  
-              Driven by experienced teams and an agile framework, we prioritize our 
-              clients' commercial goals to deliver exceptional business value.  
-              Driven by experienced teams and an agile framework, we prioritize our 
-              clients' commercial goals to deliver exceptional business value.  
+            Driven by experienced teams and an agile framework, we prioritize our
+            clients' commercial goals to deliver exceptional business value.
+            Driven by experienced teams and an agile framework, we prioritize our
+            clients' commercial goals to deliver exceptional business value.
+            Driven by experienced teams and an agile framework, we prioritize our
+            clients' commercial goals to deliver exceptional business value.
+            Driven by experienced teams and an agile framework, we prioritize our
+            clients' commercial goals to deliver exceptional business value.
+
           </p>
         </div>
       </div>
@@ -125,49 +156,49 @@ const cards = [
       {/* Accordions */}
 
       <div>
-        <PageSecExtended 
-          leftSide={features} 
-          rightSide={[]} 
-          imageRight={true} 
-          images={PEI[0]} 
+        <PageSecExtended
+          leftSide={features}
+          rightSide={[]}
+          imageRight={true}
+          images={PEI[0]}
           useFAQ
           FAQHeadings='Hey there'
         />
       </div>
-       <div>
-        <PageSecExtended 
-          leftSide={features} 
-          rightSide={[]} 
-          imageRight={false} 
-          images={PEI[2]} 
+      <div>
+        <PageSecExtended
+          leftSide={features}
+          rightSide={[]}
+          imageRight={false}
+          images={PEI[2]}
           useFAQ
-          FAQHeadings={'Hello there'} 
+          FAQHeadings={'Hello there'}
         />
       </div>
       <div>
-        <PageSecExtended 
-          leftSide={features} 
-          rightSide={[]} 
-          imageRight={true} 
-          images={PEI[1]} 
+        <PageSecExtended
+          leftSide={features}
+          rightSide={[]}
+          imageRight={true}
+          images={PEI[1]}
           useFAQ
-          FAQHeadings='Herh chama' 
+          FAQHeadings='Herh chama'
         />
       </div>
 
       {/* What you will get  */}
-      
-        <div className='mx-0'>
-         <CompaniesWeServe 
+
+      <div className='mx-0'>
+        <CompaniesWeServe
           services={Industries}
           desc={true}
           style='mx-auto max-w-[112rem] px-2 py-10 sm:px-6 lg:px-8 lg:py-14  justify-center'
-          customTitle={`py-10  relative after:absolute flex justify-center sm:m-3   items-center  after:inset-0 after:z-0 after:content-['Experience_our_exceptional_offerings'] after:text-black after:-top-0 after:left-0 after:text-5xl  after:h-full after:w-full after:font-sans  before:absolute  before:text-5xl  before:content-['Services_we_offer'] text-blue-gray-100  before:-top-4 before:left-8 before:h-full before:w-full before:z-0  before:tracking-widest before:italic  before:font-sans before:uppercase`} 
+          customTitle={`py-10  relative after:absolute flex justify-center sm:m-3   items-center  after:inset-0 after:z-0 after:content-['Experience_our_exceptional_offerings'] after:text-black after:-top-0 after:left-0 after:text-5xl  after:h-full after:w-full after:font-sans  before:absolute  before:text-5xl  before:content-['Services_we_offer'] text-blue-gray-100  before:-top-4 before:left-8 before:h-full before:w-full before:z-0  before:tracking-widest before:italic  before:font-sans before:uppercase`}
           cardDesign={'mt-6 w-full sm:w-64 sm:h-80 h-80 md:w-[25rem] md:h-[22rem] relative flex mx-5  items-end transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 '}
         />
-       
-        </div>
-     
+
+      </div>
+
 
 
       {/* Our Products sample */}
@@ -177,7 +208,11 @@ const cards = [
       <div>
         <Testimonials testimonials={testimonials} />
       </div>
-    
+
+      <div>
+        <Members people={people} />
+      </div>
+
     </div>
   )
 }
