@@ -260,6 +260,7 @@ const hireDev = [
 
 
 
+
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
@@ -488,9 +489,11 @@ export default function Nav() {
           <Button variant="text" size="sm" color="blue-gray">
             Sign In
           </Button>
-          <Button variant="gradient" size="sm">
-            Registry Contact
-          </Button>
+          <Link href={"/contactUs"}>
+            <Button variant="gradient" size="sm">
+              Registry Contact
+            </Button>
+          </Link>
         </div>
         <IconButton
           variant="text"
@@ -511,9 +514,11 @@ export default function Nav() {
           <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
             Sign In
           </Button>
-          <Button variant="gradient" size="sm" fullWidth>
-            Registry Contact
-          </Button>
+          <Link href={"/contactUs"}>
+            <Button variant="gradient" size="sm">
+              Registry Contact
+            </Button>
+          </Link>
         </div>
       </Collapse>
     </Navbar>

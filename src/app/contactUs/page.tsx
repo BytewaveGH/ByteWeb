@@ -31,7 +31,12 @@ export default function Contact_Us() {
     ]
     return (
         <div className='w-full h-full '>
-            <p className='w-full bg-red-500 p-5 text-5xl text-black flex justify-center items-center'>Hello Hire a developer</p>
+            <p className='w-full p-2 text-3xl font-bold text-black flex justify-center items-center'>
+                Supercharge Your Project with Cutting-Edge Tech Solutions
+            </p>
+            <p className='w-full  p-1 text-xl text-black flex justify-center items-center'>
+                Connect with Our Expert Team to Bring Your Vision to Life.
+            </p>
             <div className='w-full flex justify-between'>
                 <div className='w-2/5'>
                     <Timeline_Component />

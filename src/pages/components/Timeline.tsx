@@ -14,12 +14,12 @@ import {
 
 export default function Timeline_Component() {
     return (
-        <div className="mx-[5rem] w-[32rem]">
-            <div className='flex-col text-black justify-center items-center'>
-                <p className='p-1 text-2xl  '>What happens Next ?</p>
+        <div className="mx-[5rem] ">
+            <div className='flex-col w-full  text-black justify-center items-center'>
+                <p className='p-1 text-4xl  '>What happens Next ?</p>
                 {/* from us */}
-                <p className='p-1'>We will get back to you within 24 hours</p>
-                <p className='p-1'>You are a step closer to building great software</p>
+                {/* <p className='p-1 text-base'>We will get back to you within <span className='font-bold'>24 hours</span></p> */}
+                {/* <p className='p-1 text-base mb-1'>You are a step closer to building great software</p> */}
             </div>
             <Timeline>
                 <TimelineItem>
@@ -29,15 +29,28 @@ export default function Timeline_Component() {
                             <Avatar size="sm" src="/img/team-1.jpg" alt="user 1" withBorder />
                         </TimelineIcon>
                         <Typography variant="h5" color="blue-gray">
-                            Timeline Title Here.
+                            After submission,
                         </Typography>
                     </TimelineHeader>
                     <TimelineBody className="pb-8">
                         <Typography color="gary" className="font-normal text-gray-600">
-                            The key to more success is to have a lot of pillows. Put it this way, it took me
-                            twenty five years to get these plants, twenty five years of blood sweat and tears, and
-                            I&apos;m never giving up, I&apos;m just getting started. I&apos;m up to something. Fan
-                            luv.
+                            <ol>
+                                <li>
+                                    <p className='p-0.5 text-base'>We will get back to you within <span className='font-bold'>24 hours</span></p>
+
+                                </li>
+                                <li>
+                                    <p className='p-0.5 text-base'>We’ll sign an <span className='font-bold'>NDA </span>if requested. </p>
+
+                                </li>
+                                <li>
+                                    <p className='p-0.5 text-base'>You’ll be talking to product and tech experts <span className='font-bold'>(no account managers).</span></p>
+
+                                </li>
+                                <li>
+
+                                </li>
+                            </ol>
                         </Typography>
                     </TimelineBody>
                 </TimelineItem>
