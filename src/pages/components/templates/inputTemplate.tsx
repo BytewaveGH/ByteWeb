@@ -28,7 +28,7 @@ export default function InputTemplate({ label, labelCol, inputError, inputType, 
                 // labelCol={labelCol ? { span: labelCol } : { span: 3 }}
                 label={<p className=''>${label}</p>}
                 name="username"
-                rules={[{ required: isRequired, type: `${inputType}`, message: `${inputError}` }]}
+                rules={[{ required: isRequired, message: `${inputError}` }]}
                 className='w-full mb-2'
 
             >
