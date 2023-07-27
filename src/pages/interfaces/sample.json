@@ -1,0 +1,14 @@
+{
+    "selects" : [
+         { 
+            "id": 0, 
+            "label": "", 
+            "idExpr":"", 
+            "dataExpr":"", 
+            "optionsData":[], 
+            "stateName": "", 
+            "defaultValue": "",
+             "style": ""
+         }
+    ]
+}
