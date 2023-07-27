@@ -30,28 +30,9 @@ const sideItems1 = [
     {
         key: '3',
         icon: <UploadOutlined />,
-        label: 'nav 3',
+        label: 'Settings',
     },
-    {
-        key: '4',
-        icon: <UserOutlined />,
-        label: 'Dashboard',
-    },
-    {
-        key: '5',
-        icon: <VideoCameraOutlined />,
-        label: 'nav 2',
-    },
-    {
-        key: '6',
-        icon: <UploadOutlined />,
-        label: 'nav 3',
-    },
-    {
-        key: '7',
-        icon: <UserOutlined />,
-        label: 'Log out',
-    },
+
 ]
 
 
@@ -64,31 +45,27 @@ export default function Admin({ child }: { child: React.ReactNode }) {
 
     return (
         <Layout>
-            <Sider trigger={null} collapsible collapsed={collapsed}>
+            <Sider style={{ backgroundColor: 'white', borderWidth: 3 }} trigger={null} collapsible collapsed={collapsed}>
 
-                <div className="demo-logo-vertical" />
+
+                <div className='w-full h-16 flex justify-center items-center'>
+                    <p className={`text-black text-lg items-center ${collapsed && 'hidden'}`}>Bytewave Inc.</p>
+                </div>
+
+
                 <Menu
-                    theme="dark"
+                    theme="light"
                     mode="inline"
                     defaultSelectedKeys={['1']}
                     items={sideItems1}
+
                 />
-                {/* <Menu
-                    theme="dark"
-                    mode="inline"
-                    // defaultSelectedKeys={['1']}
-                    items={sideItems2}
-                /> */}
 
-                {/* <div className='h-16  absolute   inset-x-0 bottom-0  '>
-                    <Menu
-                        theme="dark"
-                        mode="inline"
-                        // defaultSelectedKeys={['1']}
-                        items={sideItems3}
-                    />
+                <div className='w-full absolute h-16 bottom-0 inset-x-0'>
+                    <p className='w-full text-ellipsis text-black text-xs flex items-center justify-center'>CopyRight of Bytewave @ 2023</p>
+                </div>
 
-                </div> */}
+
             </Sider>
             <Layout>
                 <Header style={{ padding: 0, background: colorBgContainer }}>
@@ -113,8 +90,8 @@ export default function Admin({ child }: { child: React.ReactNode }) {
                 </Header>
                 <Content
                     style={{
-                        margin: '24px 16px',
-                        padding: 24,
+                        margin: '16px 6px',
+                        padding: 10,
                         minHeight: 280,
                         background: colorBgContainer,
                     }}

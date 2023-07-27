@@ -39,3 +39,23 @@ export interface Select {
     defaultValue: string;
     style:        string;
 }
+
+export interface datagridColumnTypes{
+    id:number,
+    caption:string,
+    dataField:string,
+    allowEditing?:boolean,
+    dataType:string,
+    width?:string|number,
+    allignment?:string,
+    fixed?:boolean,
+    allowFiltering?:boolean,
+    visible?:boolean
+}
+
+
+export interface operatorsTypes {
+    id: number,
+    label: string,
+    img : any | string
+}
