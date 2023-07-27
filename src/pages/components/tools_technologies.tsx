@@ -120,7 +120,7 @@ return (
  
     <div className="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 ">
         <div className="py-10">
-          <div id="stroke-text" className="py-5 relative after:absolute flex  items-center after:italic after:inset-0 after:z-0 after:content-['Tools_and_Technologies'] after:text-black after:-top-0 after:left-0 after:text-5xl  after:h-full after:w-full after:font-sans  before:absolute  before:text-5xl  before:content-['Our_Experiences'] text-blue-gray-100  before:-top-4 before:left-8 before:h-full before:w-full before:z-0  before:tracking-widest before:italic  before:font-sans before:uppercase">
+          <div id="stroke-text" className="py-5 relative after:absolute flex  items-center after:italic after:inset-0 after:z-0 after:content-['Tools_and_Technologies'] after:text-black after:-top-0 after:left-0 after:text-5xl  after:h-full after:w-full after:font-sans  before:absolute  before:text-5xl  before:content-['Our_Experiences'] text-gray-300 before:-top-4 before:left-8 before:h-full before:w-full before:z-0  before:tracking-widest before:italic  before:font-sans before:uppercase">
 
           </div>
 

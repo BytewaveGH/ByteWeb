@@ -3,7 +3,7 @@ import MainLayout from '@/pages/Main';
 import './globals.css'
 import { Inter } from 'next/font/google'
 import React from 'react';
-
+import 'devextreme/dist/css/dx.light.css';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,9 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        
-          <MainLayout child={children} />
+      <body className={`${inter.className} dx-viewport`}>
+
+        <MainLayout child={children} />
 
       </body>
     </html>

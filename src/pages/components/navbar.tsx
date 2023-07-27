@@ -49,10 +49,11 @@ import kotlin from '../../../public/kotlin.png'
 import andriod from '../../../public/andriod.png'
 
 import Image from "next/image";
+import Link from "next/link";
 
 
 
-const colors:any = {
+const colors: any = {
   blue: "bg-blue-50 text-blue-500",
   orange: "bg-orange-50 text-orange-500",
   green: "bg-green-50 text-green-500",
@@ -63,37 +64,37 @@ const colors:any = {
   pink: "bg-pink-50 text-pink-500",
   yellow: "bg-red-50 text-yellow-500",
 };
- 
+
 const navListMenuItems = [
-  {
-    color: "blue",
-    icon: FlagIcon,
-    title: "About us",
-    description: "Learn about our story and our mission statement.",
-  },
+  // {
+  //   color: "blue",
+  //   icon: FlagIcon,
+  //   title: "About us",
+  //   description: "Learn about our story and our mission statement.",
+  // },
   {
     color: "orange",
     icon: ChatBubbleOvalLeftIcon,
     title: "Forum",
     description: "News and writings, press releases, and resources",
   },
-  {
-    color: "green",
-    icon: UsersIcon,
-    title: (
-      <div className="flex items-center gap-1">
-        Careers{" "}
-        <Chip
-          size="sm"
-          color="green"
-          variant="ghost"
-          value="We're hiring!"
-          className="capitalize"
-        />
-      </div>
-    ),
-    description: "We are always looking for talented people. Join us!",
-  },
+  // {
+  //   color: "green",
+  //   icon: UsersIcon,
+  //   title: (
+  //     <div className="flex items-center gap-1">
+  //       Careers{" "}
+  //       <Chip
+  //         size="sm"
+  //         color="green"
+  //         variant="ghost"
+  //         value="We're hiring!"
+  //         className="capitalize"
+  //       />
+  //     </div>
+  //   ),
+  //   description: "We are always looking for talented people. Join us!",
+  // },
   {
     color: "blue-gray",
     icon: FolderIcon,
@@ -106,22 +107,28 @@ const navListMenuItems = [
     title: "Our Services",
     description: "Checkout our products that helps a startup running.",
   },
-  {
-    color: "teal",
-    icon: FaceSmileIcon,
-    title: "Icons",
-    description: "Set of beautiful icons that you can use in your project.",
-  },
+  // {
+  //   color: "teal",
+  //   icon: FaceSmileIcon,
+  //   title: "Icons",
+  //   description: "Set of beautiful icons that you can use in your project.",
+  // },
   {
     color: "cyan",
     icon: PuzzlePieceIcon,
-    title: "UI Kits",
+    title: "UI Components",
     description: "High quality UI Kits helps you to 2x faster.",
   },
   {
     color: "pink",
     icon: GiftIcon,
     title: "Open Source",
+    description: "List of all our open-source projects, it's all free.",
+  },
+  {
+    color: "pink",
+    icon: GiftIcon,
+    title: "Academy of Ours",
     description: "List of all our open-source projects, it's all free.",
   },
 ];
@@ -252,11 +259,12 @@ const hireDev = [
 
 
 
- 
+
+
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
- 
+
   const renderItems = navListMenuItems.map(
     ({ icon, title, description, color }, key) => (
       <a href="#" key={key}>
@@ -283,7 +291,7 @@ function NavListMenu() {
       </a>
     )
   );
- 
+
   return (
     <React.Fragment>
       <Menu
@@ -304,21 +312,19 @@ function NavListMenu() {
               Resources
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${
-                  isMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen ? "rotate-180" : ""
+                  }`}
               />
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
+                className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen ? "rotate-180" : ""
+                  }`}
               />
             </ListItem>
           </Typography>
         </MenuHandler>
         <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-4 gap-y-1">{renderItems}</ul>
+          <ul className="grid grid-cols-3 gap-y-1">{renderItems}</ul>
         </MenuList>
       </Menu>
       <div className="block lg:hidden">
@@ -330,21 +336,17 @@ function NavListMenu() {
 
 
 // Hire a developer
- 
+
 function NavListMenu2() {
   const [isMenuOpen2, setIsMenuOpen2] = React.useState(false);
   const [isMobileMenuOpen2, setIsMobileMenuOpen2] = React.useState(false);
- 
+
   const renderItems = hireDev.map(
     ({ icon, title, description, color }, key) => (
       <a href="#" key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div className={`rounded-lg flex justify-items-center  ${colors[color]}`}>
-            {/* {React.createElement(icon, {
-              strokeWidth: 2,
-              className: "h-6 w-6",
-            })} */}
-            <Image src={icon} alt={"ji"}  className="w-1/2 h-1/2 flex justify-items-center" />
+        <MenuItem className="flex items-center  rounded-lg">
+          <div className={`rounded-lg flex justify-items-center w-16`}>
+            <Image src={icon} alt={"talents"} className="w-1/2 h-1/2 flex justify-items-center" />
           </div>
           <div>
             <Typography
@@ -362,7 +364,7 @@ function NavListMenu2() {
       </a>
     )
   );
- 
+
   return (
     <React.Fragment>
       <Menu
@@ -380,18 +382,16 @@ function NavListMenu2() {
               onClick={() => setIsMobileMenuOpen2((cur) => !cur)}
             >
               <Square3Stack3DIcon className="h-[18px] w-[18px]" />
-                Hire a developer
+              Hire a developer
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${
-                  isMenuOpen2 ? "rotate-180" : ""
-                }`}
+                className={`hidden h-3 w-3 transition-transform lg:block ${isMenuOpen2 ? "rotate-180" : ""
+                  }`}
               />
               <ChevronDownIcon
                 strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen2 ? "rotate-180" : ""
-                }`}
+                className={`block h-3 w-3 transition-transform lg:hidden ${isMobileMenuOpen2 ? "rotate-180" : ""
+                  }`}
               />
             </ListItem>
           </Typography>
@@ -412,7 +412,7 @@ function NavListMenu2() {
 
 function NavList() {
   const [openHireMenu, setOpenHireMenu] = useState<boolean>(false);
- 
+
   const triggers = {
     onMouseEnter: () => setOpenHireMenu(true),
     onMouseLeave: () => setOpenHireMenu(false),
@@ -427,10 +427,15 @@ function NavList() {
         color="blue-gray"
         className="font-normal"
       >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <CubeTransparentIcon className="h-[18px] w-[18px]" />
-          Why Bytwave
-        </ListItem>
+
+        <Link href='/whybytewave'>
+          <ListItem className="flex items-center gap-2 py-2 pr-4">
+            <CubeTransparentIcon className="h-[18px] w-[18px]" />
+            Why Bytwave
+          </ListItem>
+        </Link>
+
+
       </Typography>
 
       <NavListMenu />
@@ -453,38 +458,44 @@ function NavList() {
     </List>
   );
 }
- 
+
 export default function Nav() {
   const [openNav, setOpenNav] = React.useState(false);
- 
+
   React.useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false)
     );
   }, []);
- 
+
   return (
     <Navbar className="sticky inset-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
       <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography
-          as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
-        >
-          Bytewave
-        </Typography>
+        <Link href={"/"} >
+          <Typography
+            as="a"
+            href="#"
+            variant="h6"
+            className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+          >
+            Bytewave
+          </Typography>
+        </Link>
         <div className="hidden lg:block">
           <NavList />
         </div>
         <div className="hidden gap-2 lg:flex">
-          <Button variant="text" size="sm" color="blue-gray">
-            Sign In
-          </Button>
-          <Button variant="gradient" size="sm">
-            Registry Contact
-          </Button>
+          <Link href={"/signIn"}>
+            <Button variant="text" size="sm" color="blue-gray">
+              Sign In
+            </Button>
+          </Link>
+          <Link href={"/contactUs"}>
+            <Button variant="gradient" size="sm">
+              Registry Contact
+            </Button>
+          </Link>
         </div>
         <IconButton
           variant="text"
@@ -502,12 +513,16 @@ export default function Nav() {
       <Collapse open={openNav}>
         <NavList />
         <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
-            Sign In
-          </Button>
-          <Button variant="gradient" size="sm" fullWidth>
-            Registry Contact
-          </Button>
+          <Link href={"/signIn"}>
+            <Button variant="text" size="sm" color="blue-gray">
+              Sign In
+            </Button>
+          </Link>
+          <Link href={"/contactUs"}>
+            <Button variant="gradient" size="sm">
+              Registry Contact
+            </Button>
+          </Link>
         </div>
       </Collapse>
     </Navbar>
