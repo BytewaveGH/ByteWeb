@@ -1,106 +1,74 @@
 "use client"
+import Dashboard from '@/pages/admin/dashboard';
+import { Tabs } from 'antd';
+import React, { useRef, useState } from 'react'
+import SignForm from '../signIn/page';
 
-import React, { useRef } from 'react'
-import { Col, Row, Card } from 'antd'
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
-import { coreValuesColumns } from '@/pages/data/datagrid_cols';
-import { DataGrid } from 'devextreme-react';
-import { Column } from 'devextreme-react/data-grid';
-import Datagrid_template from '@/pages/components/templates/Datagrid';
-import adminTimeline from '@/pages/components/adminTimeline';
-import AdminTimeline from '@/pages/components/adminTimeline';
-import notes from '../../../public/notes.png'
-import file from '../../../public/file.png'
-import mail from '../../../public/mail.png'
-import Image from 'next/image';
-import { operatorsTypes } from '@/pages/interfaces/general';
+type TargetKey = React.MouseEvent | React.KeyboardEvent | string;
 
-export default function Dashboard() {
+interface props {
+    addItemsx: any[];
+}
 
-    const gridRef = useRef<any>()
+export default function AdminPage({ addItemsx }: props) {
+
+    const add = () => {
+
+        const newActiveKey = `newTab${newTabIndex.current++}`;
+        setItems([...items, { id: 0, label: 'Edit Deadline', children: dashboard, key: newActiveKey },]);
+        setActiveKey(newActiveKey);
+        // console.log("HELL YEAHHHH", items)
+    };
+
+    const dashboard = (
+        <Dashboard addTab={add} />
+    )
 
 
-    const cards = [
-        { id: 0, label: '' },
-        { id: 1, label: '' },
-        { id: 2, label: '' },
-        // { id: 3, label: '' },
+
+    const tabPages: any[] = [
+        { id: 0, label: 'Overview', children: dashboard, key: '1' },
     ]
 
-    const operators: operatorsTypes[] = [
-        { id: 0, label: 'Edit Deadline', img: notes },
-        { id: 1, label: 'Send Email', img: mail },
-        { id: 2, label: 'View Records', img: file },
-        { id: 3, label: '', img: notes },
-    ]
+    const [activeKey, setActiveKey] = useState<any>(tabPages[0].key);
+    const [items, setItems] = useState(tabPages);
+    const newTabIndex = useRef(0);
+
+    const onChange = (key: string) => {
+        setActiveKey(key);
+    };
+
+
+
+    const remove = (targetKey: TargetKey) => {
+        const targetIndex = items.findIndex((pane) => pane.key === targetKey);
+        const newPanes = items.filter((pane) => pane.key !== targetKey);
+        if (newPanes.length && targetKey === activeKey) {
+            const { key } = newPanes[targetIndex === newPanes.length ? targetIndex - 1 : targetIndex];
+            setActiveKey(key);
+        }
+        setItems(newPanes);
+    };
+
+    const onEdit = (targetKey: TargetKey, action: 'add' | 'remove') => {
+        if (action === 'add') {
+            add();
+        } else {
+            remove(targetKey);
+        }
+    };
+
+
     return (
-        <div className='w-full'>
-            {/* upper layout */}
-            <div className='w-full h-full flex justify-between '>
-                {/* left side */}
-                <div className=' w-[70%] h-full'>
-
-                    <div className='w-full h-full'>
-                        <Row gutter={16}>
-                            {cards.map(({ id, label }) => {
-                                return (
-                                    <Col key={id} span={8}>
-                                        <Card
-                                            title="Card title"
-                                            // style={{ borderWidth: 3 }}
-                                            className=' shadow-md'
-                                            bordered={true}
-                                            actions={[
-                                                // <SettingOutlined key="setting" />,
-                                                <div className='flex w-full justify-end items-center space-x-1 px-5'><p className='text-black ' >View</p><EditOutlined key="edit" /></div>,
-                                                // <EllipsisOutlined key="ellipsis" />,
-                                            ]}
-                                        >
-                                            Card content
-                                        </Card>
-                                    </Col>
-                                )
-                            })}
-                        </Row>
-
-                    </div>
-
-                    {/* bottom grid */}
-
-                    <div ref={gridRef} className='w-full h-full mt-3'>
-                        <Datagrid_template columns={coreValuesColumns} />
-                    </div>
-
-                </div>
-
-
-                {/* right side */}
-                <div className='px-2 w-[30%] h-full '>
-                    {/* top */}
-                    <div className='w-full h-full shadow-lg rounded'>
-                        <p className='pb-5 px-5 text-xl text-black'>Project Deadlines</p>
-                        <div className='w-full h-full'>
-                            <AdminTimeline />
-                        </div>
-                    </div>
-                    {/* bottom */}
-                    <div className=' w-full full mt-3 shadow-lg rounded'>
-                        <div className='w-full h-full grid grid-cols-2  '>
-                            {operators.map(({ id, label, img }) => {
-                                return (
-                                    <div key={id} className='w-full p-8 flex-col justify-center items-center'>
-                                        <Image src={img} alt='notes' className='flex justify-center items-center ' />
-                                        <p className='w-full flex  py-2'>{label}</p>
-                                    </div>
-                                )
-                            })}
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-
+        <div>
+            <Tabs
+                hideAdd
+                onChange={onChange}
+                activeKey={activeKey}
+                type="editable-card"
+                onEdit={onEdit}
+                items={items}
+            />
         </div>
     )
 }
