@@ -75,7 +75,7 @@ export default function Dashboard({ addTab, setItemsx }: { addTab?: () => void, 
                                             bordered={true}
                                             actions={[
                                                 // <SettingOutlined key="setting" />,
-                                                <div className='flex w-full justify-end items-center space-x-1 px-5'><p className='text-black ' >View</p><EditOutlined key="edit" /></div>,
+                                                <div key={id} className='flex w-full justify-end items-center space-x-1 px-5'><p className='text-black ' >View</p><EditOutlined key="edit" /></div>,
                                                 // <EllipsisOutlined key="ellipsis" />,
                                             ]}
                                         >

@@ -20,7 +20,7 @@ export default function AdminPage() {
 
     useEffect(() => {
         setItems(tabPages)
-    }, [])
+    });
 
     const newTabIndex = useRef(0);
     const [items, setItems] = useState<any>([]);
