@@ -14,10 +14,11 @@ import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/ico
 import Admin from "../components/dashboard"
 import SignForm from "@/app/signIn/page"
 import AdminPage from "@/app/admin/page"
+import { Deadlines } from "./deadlines"
 
 
 
-export default function Dashboard({ addTab }: { addTab?: () => void }) {
+export default function Dashboard({ addTab, setItemsx }: { addTab?: () => void, setItemsx?: any[] }) {
 
     const gridRef = useRef<any>()
 
@@ -29,19 +30,31 @@ export default function Dashboard({ addTab }: { addTab?: () => void }) {
         // { id: 3, label: '' },
     ]
 
+    const selectedTab = () => {
+
+        alert('hi')
+        // let tab: any = [
+        //     { id: 1, label: 'Edit Deadline', children: <Deadlines />, key: '2' }
+        // ]
+
+        let added = setItemsx && setItemsx.concat([{ id: 1, label: 'Edit Deadline', children: <Deadlines />, key: '2' }])
+        console.log("HEEEE", added);
+        return added;
+
+    }
+
+
     const operators: operatorsTypes[] = [
-        { id: 0, label: 'Edit Deadline', img: notes },
-        { id: 1, label: 'Send Email', img: mail },
-        { id: 2, label: 'View Records', img: file },
-        { id: 3, label: '', img: notes },
+        { id: 0, label: 'Edit Deadline', img: notes, selected: selectedTab },
+        { id: 1, label: 'Send Email', img: mail, selected: selectedTab },
+        { id: 2, label: 'View Records', img: file, selected: selectedTab },
+        { id: 3, label: '', img: notes, selected: selectedTab },
     ]
     const editDeadline = (
         <SignForm />
     )
 
-    const added: any = [
-        { id: 1, label: 'added', children: editDeadline, }
-    ]
+
 
     return (
         <div className='w-full'>
@@ -96,9 +109,9 @@ export default function Dashboard({ addTab }: { addTab?: () => void }) {
                     {/* bottom */}
                     <div className=' w-full full mt-3 shadow-lg rounded'>
                         <div className='w-full h-full grid grid-cols-2  '>
-                            {operators.map(({ id, label, img }) => {
+                            {operators.map(({ id, label, img, selected }) => {
                                 return (
-                                    <div key={id} onClick={addTab} className='w-full p-8 flex-col justify-center items-center'>
+                                    <div key={id} onClick={() => { addTab && addTab(); selected(); }} className='w-full p-8 flex-col justify-center items-center'>
                                         <Image src={img} alt='notes' className='flex justify-center items-center ' />
                                         <p className='w-full flex  py-2'>{label}</p>
                                     </div>

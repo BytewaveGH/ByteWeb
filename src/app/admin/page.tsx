@@ -1,7 +1,7 @@
 "use client"
 import Dashboard from '@/pages/admin/dashboard';
 import { Tabs } from 'antd';
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import SignForm from '../signIn/page';
 
 type TargetKey = React.MouseEvent | React.KeyboardEvent | string;
@@ -10,39 +10,44 @@ interface props {
     addItemsx: any[];
 }
 
-export default function AdminPage({ addItemsx }: props) {
+export default function AdminPage() {
+
+
+    // const dashboard = (
+    //     <Dashboard addTab={add} setItemsx={setItems} />
+    // )
+
+
+    useEffect(() => {
+        setItems(tabPages)
+    }, [])
+
+    const newTabIndex = useRef(0);
+    const [items, setItems] = useState<any>([]);
+
+    console.log(items)
 
     const add = () => {
 
         const newActiveKey = `newTab${newTabIndex.current++}`;
-        setItems([...items, { id: 0, label: 'Edit Deadline', children: dashboard, key: newActiveKey },]);
+        setItems([items]);
         setActiveKey(newActiveKey);
-        // console.log("HELL YEAHHHH", items)
+
     };
-
-    const dashboard = (
-        <Dashboard addTab={add} />
-    )
-
-
-
     const tabPages: any[] = [
-        { id: 0, label: 'Overview', children: dashboard, key: '1' },
+        { id: 0, label: 'Overview', children: <Dashboard addTab={add} setItemsx={items} />, key: '1' },
     ]
 
     const [activeKey, setActiveKey] = useState<any>(tabPages[0].key);
-    const [items, setItems] = useState(tabPages);
-    const newTabIndex = useRef(0);
 
     const onChange = (key: string) => {
         setActiveKey(key);
     };
 
 
-
     const remove = (targetKey: TargetKey) => {
-        const targetIndex = items.findIndex((pane) => pane.key === targetKey);
-        const newPanes = items.filter((pane) => pane.key !== targetKey);
+        const targetIndex = items.findIndex((pane: { key: TargetKey; }) => pane.key === targetKey);
+        const newPanes = items.filter((pane: { key: TargetKey; }) => pane.key !== targetKey);
         if (newPanes.length && targetKey === activeKey) {
             const { key } = newPanes[targetIndex === newPanes.length ? targetIndex - 1 : targetIndex];
             setActiveKey(key);
@@ -57,6 +62,9 @@ export default function AdminPage({ addItemsx }: props) {
             remove(targetKey);
         }
     };
+
+
+
 
 
     return (

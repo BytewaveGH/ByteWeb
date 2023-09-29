@@ -8,12 +8,12 @@ interface props {
 }
 
 export default function Datagrid_template({ columns }: props) {
-    const displayModes = [
+    const displayModes: any[] = [
         { text: "Display Mode 'full'", value: "full" },
         { text: "Display Mode 'compact'", value: "compact" },
     ];
 
-    const allowedPageSizes = ["all", 15, 50, 125, 200, 500, 1000];
+    const allowedPageSizes: any = ["all", 15, 50, 125, 200, 500, 1000];
 
     const dateFormat = 'EEE, dd MMM yyyy HH:mm'
 
