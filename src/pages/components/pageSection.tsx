@@ -46,8 +46,8 @@ export default function PageSec() {
           </div>
           <div className="lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0">
             <div className="rounded-2xl bg-gray-50  text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center ">
-              <CarouselWC />
-            
+              <CarouselWC useImages={true} />
+
             </div>
           </div>
         </div>

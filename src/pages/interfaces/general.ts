@@ -58,4 +58,5 @@ export interface operatorsTypes {
     id: number,
     label: string,
     img : any | string
+    selected : ()=>void | any
 }

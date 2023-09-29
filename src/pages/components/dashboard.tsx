@@ -90,8 +90,8 @@ export default function Admin({ child }: { child: React.ReactNode }) {
                 </Header>
                 <Content
                     style={{
-                        margin: '16px 6px',
-                        padding: 10,
+                        margin: '8px 6px',
+                        padding: 6,
                         minHeight: 280,
                         background: colorBgContainer,
                     }}
