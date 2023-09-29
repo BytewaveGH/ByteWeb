@@ -141,13 +141,13 @@ export default function WhyBytewave({ }: Props) {
           </h1>
           <p className="mt-6 text-lg text-slate-600 text-center text-gray-600 max-w-5xl mx-auto dark:text-slate-400">
             Driven by experienced teams and an agile framework, we prioritize our
-            clients' commercial goals to deliver exceptional business value.
+            clients commercial goals to deliver exceptional business value.
             Driven by experienced teams and an agile framework, we prioritize our
-            clients' commercial goals to deliver exceptional business value.
+            clients commercial goals to deliver exceptional business value.
             Driven by experienced teams and an agile framework, we prioritize our
-            clients' commercial goals to deliver exceptional business value.
+            clients commercial goals to deliver exceptional business value.
             Driven by experienced teams and an agile framework, we prioritize our
-            clients' commercial goals to deliver exceptional business value.
+            clients commercial goals to deliver exceptional business value.
 
           </p>
         </div>
