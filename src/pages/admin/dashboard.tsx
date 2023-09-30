@@ -91,7 +91,9 @@ export default function Dashboard({ addTab, setItemsx }: { addTab?: () => void, 
                     {/* bottom grid */}
 
                     <div ref={gridRef} className='w-full h-full mt-3'>
-                        <Datagrid_template columns={coreValuesColumns} />
+                        <Datagrid_template
+                            columns={coreValuesColumns}
+                        />
                     </div>
 
                 </div>

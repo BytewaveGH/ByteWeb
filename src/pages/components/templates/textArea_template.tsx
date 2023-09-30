@@ -36,7 +36,7 @@ export const TextArea_template = ({ label, textareaStyle, inputType, placeholder
                 className='mb-2'
             >
                 <TextArea
-                    style={...textareaStyle}
+                    style={textareaStyle}
                     className={`o overflow-y-scroll resize-none `}
                     placeholder={placeholder}
                     onChange={(e: any) => {
