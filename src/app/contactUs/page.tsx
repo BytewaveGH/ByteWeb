@@ -1,9 +1,9 @@
 "use client"
 import Timeline_Component from '@/pages/components/Timeline'
 import InputTemplate from '@/pages/components/templates/inputTemplate'
-import { SelectTemplate } from '@/pages/components/templates/selectTemplate'
-import { TextArea_template } from '@/pages/components/templates/textArea_template'
 import { Input, Select, Textarea, } from '@/pages/interfaces/general'
+import SelectTemplate from '@/pages/components/templates/selectTemplate'
+import TextArea_template from '@/pages/components/templates/textArea_template'
 import { Button, Calendar, Form } from 'antd'
 import React from 'react'
 
