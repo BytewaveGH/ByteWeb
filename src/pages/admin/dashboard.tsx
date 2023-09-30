@@ -1,14 +1,14 @@
 "use client"
 
 import { useRef } from "react"
-import { operatorsTypes } from "../interfaces/general"
+// import { operatorsTypes } from "../interfaces/general"
 import notes from '../../../public/notes.png'
 import mail from '../../../public/mail.png'
 import file from '../../../public/file.png'
 import { Card, Col, Row } from "antd"
 import AdminTimeline from "../components/adminTimeline"
 import Datagrid_template from "../components/templates/Datagrid"
-import { coreValuesColumns } from "../data/datagrid_cols"
+// import { coreValuesColumns } from "../data/datagrid_cols"
 import Image from 'next/image'
 import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
 import Admin from "../components/dashboard"
@@ -44,7 +44,7 @@ export default function Dashboard({ addTab, setItemsx }: { addTab?: () => void, 
     }
 
 
-    const operators: operatorsTypes[] = [
+    const operators = [
         { id: 0, label: 'Edit Deadline', img: notes, selected: selectedTab },
         { id: 1, label: 'Send Email', img: mail, selected: selectedTab },
         { id: 2, label: 'View Records', img: file, selected: selectedTab },
@@ -92,7 +92,7 @@ export default function Dashboard({ addTab, setItemsx }: { addTab?: () => void, 
 
                     <div ref={gridRef} className='w-full h-full mt-3'>
                         <Datagrid_template
-                            columns={coreValuesColumns}
+                            columns={[]}
                         />
                     </div>
 

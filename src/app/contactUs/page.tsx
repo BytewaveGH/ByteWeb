@@ -1,7 +1,7 @@
 "use client"
 import Timeline_Component from '@/pages/components/Timeline'
 import InputTemplate from '@/pages/components/templates/inputTemplate'
-import { Input, Select, Textarea, } from '@/pages/interfaces/general'
+// import { Input, Select, Textarea, } from '@/pages/interfaces/general'
 import SelectTemplate from '@/pages/components/templates/selectTemplate'
 import TextArea_template from '@/pages/components/templates/textArea_template'
 import { Button, Calendar, Form } from 'antd'
@@ -9,23 +9,23 @@ import React from 'react'
 
 export default function Contact_Us() {
 
-    const inputs1: Input[] = [
+    const inputs1 = [
         { id: 0, label: 'Full Name', stateName: '', defaultValue: '', style: '' },
         { id: 1, label: 'Email', stateName: '', defaultValue: '', style: '' },
     ]
-    const inputs2: Input[] = [
+    const inputs2 = [
         { id: 0, label: 'Business Name', stateName: '', defaultValue: '', style: '' },
         { id: 1, label: 'Website', stateName: '', defaultValue: '', style: '' },
     ]
 
-    const selects1: Select[] = [
+    const selects1 = [
         { id: 0, label: 'Select Category', idExpr: '', dataExpr: '', optionsData: [], stateName: '', defaultValue: '', style: '' },
     ]
-    const selects2: Select[] = [
+    const selects2 = [
         { id: 0, label: 'Select Budget', idExpr: '', dataExpr: '', optionsData: [], stateName: '', defaultValue: '', style: '' },
     ]
 
-    const textArea1: Textarea[] = [
+    const textArea1 = [
         { id: 0, label: 'Project Description', stateName: '', defaultValue: '', style: '' },
 
     ]
