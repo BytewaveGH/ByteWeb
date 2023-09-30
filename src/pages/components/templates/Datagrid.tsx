@@ -38,13 +38,13 @@ export default function Datagrid_template({ columns }: props) {
                 <Editing mode={"cell"} allowAdding={true} allowUpdating={true} />
                 {/* <LoadPanel enabled={true} /> */}
 
-                {columns.map(({ id, dataField, caption, allowEditing, allignment, allowFiltering, dataType, width, fixed, visible }: datagridColumnTypes) => {
+                {columns?.map(({ id, dataField, caption, allowEditing, allignment, allowFiltering, dataType, width, fixed, visible }: datagridColumnTypes) => {
                     return (
                         <Column
                             key={id}
                             dataField={dataField}
                             caption={caption}
-                            dataType={dataType}
+                            // dataType={dataType}
                             width={width === null ? 150 : width}
                             alignment={dataType === 'boolean' ? 'center' : 'left'}
                             fixed={fixed}
@@ -66,7 +66,7 @@ export default function Datagrid_template({ columns }: props) {
                 <Pager
                     visible={true}
                     allowedPageSizes={allowedPageSizes}
-                    displayMode={displayModes}
+                    // displayMode={displayModes}
                     showInfo={true}
                     showNavigationButtons={true}
                     showPageSizeSelector={true}
