@@ -14,7 +14,7 @@ import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/ico
 import Admin from "../components/dashboard"
 import SignForm from "@/app/signIn/page"
 import AdminPage from "@/app/admin/page"
-import { Deadlines } from "./deadlines"
+import Deadlines from "./deadlines";
 
 
 

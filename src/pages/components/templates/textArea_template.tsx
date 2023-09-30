@@ -20,7 +20,7 @@ interface props {
 
 }
 
-export const TextArea_template = ({ label, textareaStyle, inputType, placeholder, setInputValue, isAllowClear, isRequired, isShowCount, maxLength, requiredPrompt, height, labelCol, wrapperCol }: props) => {
+export default function TextArea_template({ label, textareaStyle, inputType, placeholder, setInputValue, isAllowClear, isRequired, isShowCount, maxLength, requiredPrompt, height, labelCol, wrapperCol }: props) {
     const [data, setData] = useState<string>()
     const { TextArea } = Input;
     return (
