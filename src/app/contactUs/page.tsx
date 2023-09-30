@@ -116,8 +116,9 @@ export default function Contact_Us() {
                         <div className='w-full '>
                             {textArea1.map(({ id, label, defaultValue, stateName, style }) => {
                                 return (
-                                    <>
+                                    <div key={id}>
                                         <TextArea_template
+
                                             label={label}
                                             inputType={'text'}
                                             labelCol={5}
@@ -129,11 +130,9 @@ export default function Contact_Us() {
                                             maxLength={100}
                                             requiredPrompt={''}
                                             textareaStyle={{ height: '100px' }}
-                                            setInputValue={function (value: any): void {
-                                                throw new Error('Function not implemented.')
-                                            }}
+                                            setInputValue={() => { }}
                                             height={100} />
-                                    </>
+                                    </div>
                                 )
                             })}
                         </div>
