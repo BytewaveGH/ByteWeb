@@ -1,4 +1,4 @@
-import { datagridColumnTypes } from '@/pages/interfaces/general';
+
 import { DataGrid, LoadPanel } from 'devextreme-react'
 import { Column, Editing, Export, GroupPanel, HeaderFilter, Pager, Scrolling, Search, SearchPanel } from 'devextreme-react/data-grid'
 import React from 'react'
@@ -38,7 +38,7 @@ export default function Datagrid_template({ columns }: props) {
                 <Editing mode={"cell"} allowAdding={true} allowUpdating={true} />
                 {/* <LoadPanel enabled={true} /> */}
 
-                {columns?.map(({ id, dataField, caption, allowEditing, allignment, allowFiltering, dataType, width, fixed, visible }: datagridColumnTypes) => {
+                {columns?.map(({ id, dataField, caption, allowEditing, allignment, allowFiltering, dataType, width, fixed, visible }: any) => {
                     return (
                         <Column
                             key={id}
