@@ -26,6 +26,8 @@ export default function Testimonials({ testimonials }: { testimonials: any[] }) 
                   src={testimonial.imgLink}
                   alt={'Testimonial image'}
                   className="mx-auto h-10 w-10 rounded-full"
+                  width={400}
+                  height={400}
                 />
                 {/* <img
                   className="mx-auto h-10 w-10 rounded-full"

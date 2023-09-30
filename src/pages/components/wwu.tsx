@@ -1,6 +1,7 @@
 import React from 'react';
 import laptop from '../../../public/laptops.jpg';
 import rightarrow from '../../../public/rightarrow.png'
+import wwu from '../../../public/wwu.jpg'
 import Image from 'next/image';
 import { Button, Form, Input, InputNumber } from 'antd';
 import { layout } from './variantComp';
@@ -22,8 +23,10 @@ const stats = [
 export default function WWU() {
   return (
     <div className="relative isolate overflow-hidden bg-gray-900 py-16 sm:py-20 md:mx-10 bg-fixed">
-      <img
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+      <Image
+
+        // src={wwu}
+        src={""}
         alt=""
         className="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center "
 
@@ -99,7 +102,7 @@ export default function WWU() {
               <Form.Item colon={false} label={<p className='text-white hidden'>Message</p>} className='' >
                 <div className='flex w-full space-x-5'>
                   <Button type="primary" htmlType="submit" className='w-full'>
-                    Let's build Something
+                    Lets build Something
                   </Button>
 
                 </div>
