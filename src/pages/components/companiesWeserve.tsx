@@ -22,7 +22,7 @@ export default function CompaniesWeServe({ services, customTitle, cardDesign, st
             </div>
 
             <div className=' mx-auto flex flex-wrap px-2 justify-center items-center '>
-                {services.map((ind: any, index: number) => {
+                {services?.map((ind: any, index: number) => {
                     return (
                         <Card key={index} className={cardDesign ? cardDesign : "mt-6 w-full sm:w-72 sm:h-72 h-60 relative flex mx-5  items-end transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 "}>
                             <span className="animate-ping absolute inline-flex w-2 h-2 rounded-full  bg-blue-500 opacity-75 "></span>
