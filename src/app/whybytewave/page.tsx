@@ -37,7 +37,7 @@ export default function WhyBytewave({ }: Props) {
   const testimonials = [
     {
       id: 1,
-      imgLink: "https://images.pexels.com/photos/6000065/pexels-photo-6000065.jpeg?auto=compress&cs=tinysrgb&w=400",
+      imgLink: graduation,
       testimony: "I recently had my artwork framed by The Kwame Inc Frames, and I couldn't be happier with the result. The attention to detail and craftsmanship are exceptional. My piece looks stunning, and the frame perfectly complements the artwork.",
       contributor: "Josephine F Kwakye",
       occupation: "Software Developer"
@@ -45,7 +45,7 @@ export default function WhyBytewave({ }: Props) {
 
     {
       id: 2,
-      imgLink: "https://images.pexels.com/photos/5792641/pexels-photo-5792641.jpeg?auto=compress&cs=tinysrgb&w=400",
+      imgLink: graduation,
       testimony: "I entrusted them with framing a family portrait, and they exceeded my expectations.The team helped me choose the ideal frame that enhanced the photograph beautifully and the final product is now proudly displayed in our home. Thank you, The Kwame Inc Frames!",
       contributor: "Michael Reynolds",
       occupation: "Entrepreneur"
@@ -53,7 +53,7 @@ export default function WhyBytewave({ }: Props) {
 
     {
       id: 3,
-      imgLink: "https://images.pexels.com/photos/5615665/pexels-photo-5615665.jpeg?auto=compress&cs=tinysrgb&w=420&h=400&dpr=1",
+      imgLink: graduation,
       testimony: "The team understood the sentimental value of the artwork I brought in and treated it with utmost care. They provided valuable suggestions for frame selection, and the end result was breathtaking. I am grateful for their expertise and professionalism.",
       contributor: "Abena Mary",
       occupation: "Business Woman"
@@ -95,37 +95,37 @@ export default function WhyBytewave({ }: Props) {
       name: 'Leslie Alexander',
       role: 'Co-Founder / CEO',
       imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        graduation,
     },
     {
       name: 'Leslie Alexander',
       role: 'Co-Founder / CEO',
       imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        graduation,
     },
     {
       name: 'Leslie Alexander',
       role: 'Co-Founder / CEO',
       imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        graduation,
     },
     {
       name: 'Leslie Alexander',
       role: 'Co-Founder / CEO',
       imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        graduation,
     },
     {
       name: 'Leslie Alexander',
       role: 'Co-Founder / CEO',
       imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        graduation,
     },
     {
       name: 'Leslie Alexander',
       role: 'Co-Founder / CEO',
       imageUrl:
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+        graduation,
     },
 
     // More people...
