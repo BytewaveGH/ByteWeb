@@ -4,7 +4,6 @@ import rightarrow from '../../../public/rightarrow.png'
 import wwu from '../../../public/wwu.jpg'
 import Image from 'next/image';
 import { Button, Form, Input, InputNumber } from 'antd';
-import { layout } from './variantComp';
 
 
 const links = [
