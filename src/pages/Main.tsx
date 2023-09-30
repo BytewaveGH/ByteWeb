@@ -11,31 +11,32 @@ import { useSearchParams } from 'next/navigation'
 const { Content, Footer } = Layout;
 
 const MainLayout = ({ child }: { child: React.ReactNode }) => {
-  const currentUrl = window.location.href
+  // const currentUrl = window.location.href
+  const currentUrl = "hi"
 
   console.log(currentUrl)
   return (
     <div>
-      {
+      {/* {
         currentUrl.includes("http://localhost:3000/admin") ?
           <Layout className='w-full h-screen '>
             <Admin child={child} />
           </Layout>
-          :
+          : */}
 
-          <Layout className='w-full'>
-            <Nav />
-            <Content className="site-layout" >
+      <Layout className='w-full'>
+        <Nav />
+        <Content className="site-layout" >
 
-              {child}
+          {child}
 
 
-            </Content>
-            <Footer style={{ textAlign: 'center' }}>
-              <NavFooter />
-            </Footer>
-          </Layout>
-      }
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>
+          <NavFooter />
+        </Footer>
+      </Layout>
+      {/* } */}
     </div >
   )
 }
