@@ -27,7 +27,7 @@ interface props {
     cusWidth?: any
 }
 
-export const SelectTemplate = ({ label, index, options, idexpr, dataexp, style, selectStyle, extraWidget, disabled = undefined, placeHolder, selectedValue, useCallFunc, labelCol, wrapperCol, requiredPrompt, isRequired }: props) => {
+export default function SelectTemplate({ label, index, options, idexpr, dataexp, style, selectStyle, extraWidget, disabled = undefined, placeHolder, selectedValue, useCallFunc, labelCol, wrapperCol, requiredPrompt, isRequired }: props) {
     const [data, setData] = useState<any>()
     return (
 
