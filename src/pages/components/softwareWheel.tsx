@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CircularText, MoonIcon } from "./Icons";
+
 
 const SoftwareWheel = () => {
     return (
